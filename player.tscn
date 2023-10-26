@@ -18,3 +18,21 @@ texture = ExtResource("1_5yhci")
 visible = false
 position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_2wm4o")
+
+[node name="Blasters" type="Node2D" parent="."]
+
+[node name="FrontLeft" type="Node2D" parent="Blasters"]
+position = Vector2(12, -10)
+
+[node name="FrontRight" type="Node2D" parent="Blasters"]
+position = Vector2(11, 10)
+
+[node name="BackLeft" type="Node2D" parent="Blasters"]
+position = Vector2(3, -16)
+
+[node name="BackRight" type="Node2D" parent="Blasters"]
+position = Vector2(3, 15)
+
+[node name="BlasterCooldown" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
