@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwip11jixqeca"]
+[gd_scene load_steps=4 format=3 uid="uid://bvsf1cud8uuvo"]
 
-[ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/images/player_ship.svg" id="1_5yhci"]
-[ext_resource type="Script" path="res://player.gd" id="1_7n3t7"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_dvebg"]
+[ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/images/player_ship.svg" id="2_p65gm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wm4o"]
 radius = 25.0799
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_7n3t7")
+script = ExtResource("1_dvebg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_5yhci")
+texture = ExtResource("2_p65gm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

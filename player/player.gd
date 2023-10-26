@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 
-const PROJECTILE_SCENE = preload("res://projectile.tscn")
+const PROJECTILE_SCENE: PackedScene = preload("res://projectile/projectile.tscn")
 
 const FORWARD_THRUST: float = 2.0
 const FORWARD_THRUST_DECELERATION: float = 1.0
@@ -68,16 +68,13 @@ func process_blasters() -> void:
 	if not blaster_cooldown.is_stopped():
 		return
 	
-	blaster_cooldown.start()
 	var blaster_position: Vector2 = blasters[blaster_i].global_position
 	spawn_projectile(blaster_position)
 	blaster_i = wrapi(blaster_i + 1, 0, blasters.size())
+	blaster_cooldown.start()
 
 
-func spawn_projectile(position: Vector2) -> void:
+func spawn_projectile(spawn_position: Vector2) -> void:
 	var projectile = PROJECTILE_SCENE.instantiate()
-	projectile.rotation = rotation
-	projectile.fire(Vector2(cos(rotation), sin(rotation)), velocity.length())
 	get_parent().add_child(projectile)
-	projectile.global_position = position
-	
+	projectile.fire(spawn_position, rotation, velocity.length())
