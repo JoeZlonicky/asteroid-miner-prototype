@@ -1,7 +1,7 @@
 extends Equipment
 
 
-const PROJECTILE_SCENE: PackedScene = preload("res://projectile/projectile.tscn")
+const PROJECTILE_SCENE: PackedScene = preload("res://data/projectiles/projectile.tscn")
 
 var point_index: int = 0
 

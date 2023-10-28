@@ -10,9 +10,9 @@ func on_unequip():
 	pass
 
 
-func active_update(delta: float):
+func active_update(_delta: float):
 	pass
 
 
-func passive_update(delta: float):
+func passive_update(_delta: float):
 	pass

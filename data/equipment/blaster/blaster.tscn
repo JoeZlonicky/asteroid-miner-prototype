@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://clydoun60iql"]
 
-[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://data/equipment/equipment.tscn" id="1_chu0s"]
-[ext_resource type="Script" path="res://data/equipment/weapons/blaster.gd" id="2_jmqi8"]
+[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://data/equipment/equipment.tscn" id="1_sxfdo"]
+[ext_resource type="Script" path="res://data/equipment/blaster/blaster.gd" id="2_2rlo4"]
 
-[node name="Blaster" instance=ExtResource("1_chu0s")]
-script = ExtResource("2_jmqi8")
+[node name="Blaster" instance=ExtResource("1_sxfdo")]
+script = ExtResource("2_2rlo4")
 
 [node name="Point1" type="Marker2D" parent="." index="0"]
 position = Vector2(23, -3)
