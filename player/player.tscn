@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvsf1cud8uuvo"]
+[gd_scene load_steps=6 format=3 uid="uid://bvsf1cud8uuvo"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_dvebg"]
 [ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/images/player_ship.svg" id="2_p65gm"]
+[ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://data/equipment/weapons/blaster.tscn" id="3_45gt5"]
+[ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://data/equipment/engines/standard_engine.tscn" id="4_b6qkp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wm4o"]
 radius = 25.0799
@@ -19,20 +21,6 @@ visible = false
 position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_2wm4o")
 
-[node name="Blasters" type="Node2D" parent="."]
+[node name="Blaster" parent="." instance=ExtResource("3_45gt5")]
 
-[node name="FrontLeft" type="Node2D" parent="Blasters"]
-position = Vector2(12, -10)
-
-[node name="FrontRight" type="Node2D" parent="Blasters"]
-position = Vector2(11, 10)
-
-[node name="BackLeft" type="Node2D" parent="Blasters"]
-position = Vector2(3, -16)
-
-[node name="BackRight" type="Node2D" parent="Blasters"]
-position = Vector2(3, 15)
-
-[node name="BlasterCooldown" type="Timer" parent="."]
-wait_time = 0.05
-one_shot = true
+[node name="StandardEngine" parent="." instance=ExtResource("4_b6qkp")]

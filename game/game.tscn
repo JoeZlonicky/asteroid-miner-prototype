@@ -32,7 +32,7 @@ script = ExtResource("1_rx8ei")
 layer = -1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
-motion_mirroring = Vector2(1920, 1080)
+motion_mirroring = Vector2(3840, 2160)
 
 [node name="Stars" type="ColorRect" parent="Background/ParallaxLayer"]
 visible = false
@@ -50,7 +50,7 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Background/ParallaxLayer"]
 texture_repeat = 2
-custom_minimum_size = Vector2(1920, 1080)
+custom_minimum_size = Vector2(3840, 2160)
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("4_yboma")

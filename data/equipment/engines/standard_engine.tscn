@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5xxfcf4yrqqj"]
+
+[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://data/equipment/equipment.tscn" id="1_62xcg"]
+[ext_resource type="Script" path="res://data/equipment/engines/standard_engine.gd" id="2_03twx"]
+
+[node name="StandardEngine" instance=ExtResource("1_62xcg")]
+script = ExtResource("2_03twx")
