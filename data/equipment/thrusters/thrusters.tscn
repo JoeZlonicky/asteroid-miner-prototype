@@ -5,7 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://b3571hwejk632" path="res://assets/images/circle.svg" id="3_wunpd"]
 
 [sub_resource type="Gradient" id="Gradient_vcqdl"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0, 0.478395, 1)
+colors = PackedColorArray(1, 0.636866, 0.0738726, 1, 0.792177, 0, 0.290383, 0.506173, 0.952941, 0, 0.243137, 0.372549)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_w5tbn"]
 gradient = SubResource("Gradient_vcqdl")
@@ -25,7 +26,6 @@ orbit_velocity_max = 0.0
 scale_min = 0.07
 scale_max = 0.07
 scale_curve = SubResource("CurveTexture_n4722")
-color = Color(0.470588, 0.796078, 1, 1)
 color_ramp = SubResource("GradientTexture1D_w5tbn")
 
 [node name="Thrusters" instance=ExtResource("1_01m3c")]
