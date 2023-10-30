@@ -13,6 +13,8 @@ const MAX_ROTATION_THRUST: float = 2.0
 
 var current_rotation_thrust: float = 0.0
 
+@onready var trail: GPUParticles2D = $Trail
+
 
 func active_update(delta: float) -> void:
 	process_velocity(delta)
@@ -27,12 +29,16 @@ func process_velocity(delta: float) -> void:
 		forward_input = -1
 	
 	if forward_input > 0:
-		owner.velocity += forward_input * FORWARD_THRUST * delta * Vector2(cos(owner.rotation), sin(owner.rotation))
+		var direction := Vector2(cos(owner.rotation), sin(owner.rotation))
+		owner.velocity += forward_input * FORWARD_THRUST * delta * direction
 		owner.velocity = owner.velocity.limit_length(MAX_FORWARD_THRUST)
+		trail.emitting = true
 	elif forward_input < 0:
 		owner.velocity = owner.velocity.move_toward(Vector2.ZERO, SLOW_THRUST * delta)
+		trail.emitting = false
 	else:
 		owner.velocity = owner.velocity.move_toward(Vector2.ZERO, FORWARD_THRUST_DECELERATION * delta)
+		trail.emitting = false
 	
 	owner.move_and_slide()
 

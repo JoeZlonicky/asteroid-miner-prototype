@@ -1,46 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://bvsf1cud8uuvo"]
+[gd_scene load_steps=6 format=3 uid="uid://bvsf1cud8uuvo"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_dvebg"]
 [ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/images/player_ship.svg" id="2_p65gm"]
 [ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://data/equipment/blaster/blaster.tscn" id="3_45gt5"]
 [ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://data/equipment/thrusters/thrusters.tscn" id="4_b6qkp"]
-[ext_resource type="Texture2D" uid="uid://b3571hwejk632" path="res://assets/images/circle.svg" id="5_gh6fp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wm4o"]
 radius = 25.0799
 
-[sub_resource type="Gradient" id="Gradient_t1wmq"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_w5tbn"]
-gradient = SubResource("Gradient_t1wmq")
-
-[sub_resource type="Curve" id="Curve_4f784"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_n4722"]
-curve = SubResource("Curve_4f784")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fxehk"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 0, 0)
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
-scale_min = 0.07
-scale_max = 0.07
-scale_curve = SubResource("CurveTexture_n4722")
-color = Color(0.470588, 0.796078, 1, 1)
-color_ramp = SubResource("GradientTexture1D_w5tbn")
-
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(51, 3)
 script = ExtResource("1_dvebg")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_p65gm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -51,10 +21,7 @@ shape = SubResource("CircleShape2D_2wm4o")
 
 [node name="Thrusters" parent="." instance=ExtResource("4_b6qkp")]
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-show_behind_parent = true
-position = Vector2(-14, 0)
-amount = 16
-process_material = SubResource("ParticleProcessMaterial_fxehk")
-texture = ExtResource("5_gh6fp")
-lifetime = 2.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_p65gm")
