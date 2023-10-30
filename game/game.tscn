@@ -1,59 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwcbxr15t8ayj"]
+[gd_scene load_steps=4 format=3 uid="uid://fwlb35x2ys72"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_rx8ei"]
-[ext_resource type="Shader" path="res://shaders/stars.gdshader" id="2_hyuxx"]
-[ext_resource type="Texture2D" uid="uid://c27ekeeh0lfv1" path="res://assets/images/background.png" id="4_yboma"]
+[ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://game/background/background.tscn" id="2_erpy7"]
 [ext_resource type="PackedScene" uid="uid://bvsf1cud8uuvo" path="res://player/player.tscn" id="5_aldug"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_y01qh"]
-fractal_gain = 1.0
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_v81uj"]
-width = 1920
-height = 1920
-seamless = true
-as_normal_map = true
-bump_strength = 32.0
-noise = SubResource("FastNoiseLite_y01qh")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jcras"]
-shader = ExtResource("2_hyuxx")
-shader_parameter/background_color = Color(0.0627451, 0.0745098, 0.113725, 1)
-shader_parameter/star_density = 0.307
-shader_parameter/star_color = Color(1, 1, 1, 1)
-shader_parameter/color_mix = 0.549
-shader_parameter/offset = Vector2(-0.055, 0)
-shader_parameter/noise = SubResource("NoiseTexture2D_v81uj")
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_rx8ei")
 
-[node name="Background" type="ParallaxBackground" parent="."]
-layer = -1
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
-motion_mirroring = Vector2(3840, 2160)
-
-[node name="Stars" type="ColorRect" parent="Background/ParallaxLayer"]
-visible = false
-material = SubResource("ShaderMaterial_jcras")
-custom_minimum_size = Vector2(1920, 1080)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -384.0
-offset_top = -216.0
-offset_right = 1536.0
-offset_bottom = 864.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="Background/ParallaxLayer"]
-texture_repeat = 2
-custom_minimum_size = Vector2(3840, 2160)
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("4_yboma")
+[node name="Background" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("2_erpy7")]
+camera = NodePath("../Camera2D")
 
 [node name="Player" parent="." instance=ExtResource("5_aldug")]
 
@@ -61,3 +16,4 @@ texture = ExtResource("4_yboma")
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(51, 3)
