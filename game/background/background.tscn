@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cac3tpqtq4fos"]
+[gd_scene load_steps=6 format=3 uid="uid://cac3tpqtq4fos"]
 
 [ext_resource type="Shader" path="res://game/background/stars.gdshader" id="1_y1l0r"]
 [ext_resource type="Script" path="res://game/background/background.gd" id="2_2wp3b"]
@@ -6,21 +6,58 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jcras"]
 shader = ExtResource("1_y1l0r")
 shader_parameter/bg_color = Color(0.0627451, 0.0627451, 0.141176, 1)
-shader_parameter/star_color = Color(0.658824, 0.815686, 1, 0.32549)
-shader_parameter/star_size = 3.361
+shader_parameter/star_color = Color(1, 1, 1, 0.494118)
+shader_parameter/star_size = 2.0
 shader_parameter/star_density = 0.32
 shader_parameter/star_twinkle_speed = 5.0
 shader_parameter/camera_offset = null
 
-[node name="Background" type="ParallaxBackground"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bk2y3"]
+shader = ExtResource("1_y1l0r")
+shader_parameter/bg_color = Color(0.0627451, 0.0627451, 0.141176, 0)
+shader_parameter/star_color = Color(0.658824, 0.815686, 1, 0.819608)
+shader_parameter/star_size = 3.0
+shader_parameter/star_density = 0.32
+shader_parameter/star_twinkle_speed = 5.0
+shader_parameter/camera_offset = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6685"]
+shader = ExtResource("1_y1l0r")
+shader_parameter/bg_color = Color(0.0627451, 0.0627451, 0.141176, 0)
+shader_parameter/star_color = Color(0.658824, 0.815686, 1, 1)
+shader_parameter/star_size = 4.0
+shader_parameter/star_density = 0.145
+shader_parameter/star_twinkle_speed = 5.0
+shader_parameter/camera_offset = null
+
+[node name="Background" type="CanvasLayer"]
 layer = -1
 script = ExtResource("2_2wp3b")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(3840, 2160)
-
-[node name="Stars" type="ColorRect" parent="ParallaxLayer"]
+[node name="StaticStars" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_jcras")
+custom_minimum_size = Vector2(3840, 2160)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3840.0
+offset_bottom = 2160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FarStars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_bk2y3")
+custom_minimum_size = Vector2(3840, 2160)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3840.0
+offset_bottom = 2160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CloseStars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_r6685")
 custom_minimum_size = Vector2(3840, 2160)
 anchors_preset = 15
 anchor_right = 1.0
