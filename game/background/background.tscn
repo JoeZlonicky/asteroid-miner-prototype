@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cac3tpqtq4fos"]
+[gd_scene load_steps=7 format=3 uid="uid://cac3tpqtq4fos"]
 
 [ext_resource type="Shader" path="res://game/background/stars.gdshader" id="1_y1l0r"]
 [ext_resource type="Script" path="res://game/background/background.gd" id="2_2wp3b"]
@@ -21,13 +21,22 @@ shader_parameter/star_density = 0.32
 shader_parameter/star_twinkle_speed = 5.0
 shader_parameter/camera_offset = null
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6685"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ntcvj"]
 shader = ExtResource("1_y1l0r")
 shader_parameter/bg_color = Color(0.0627451, 0.0627451, 0.141176, 0)
 shader_parameter/star_color = Color(0.658824, 0.815686, 1, 1)
 shader_parameter/star_size = 5.0
 shader_parameter/star_density = 0.145
 shader_parameter/star_twinkle_speed = 5.0
+shader_parameter/camera_offset = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_isfvo"]
+shader = ExtResource("1_y1l0r")
+shader_parameter/bg_color = Color(0.0627451, 0.0627451, 0.141176, 0)
+shader_parameter/star_color = Color(0.772549, 0.772549, 0.772549, 0.427451)
+shader_parameter/star_size = 7.0
+shader_parameter/star_density = 0.198
+shader_parameter/star_twinkle_speed = 0.0
 shader_parameter/camera_offset = null
 
 [node name="Background" type="CanvasLayer"]
@@ -56,8 +65,19 @@ offset_bottom = 2160.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="MediumStars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ntcvj")
+custom_minimum_size = Vector2(3840, 2160)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3840.0
+offset_bottom = 2160.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="CloseStars" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_r6685")
+material = SubResource("ShaderMaterial_isfvo")
 custom_minimum_size = Vector2(3840, 2160)
 anchors_preset = 15
 anchor_right = 1.0

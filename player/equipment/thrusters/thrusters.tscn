@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://c5xxfcf4yrqqj"]
 
-[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://data/equipment/equipment.tscn" id="1_01m3c"]
-[ext_resource type="Script" path="res://data/equipment/thrusters/thrusters.gd" id="2_j4ixl"]
-[ext_resource type="Texture2D" uid="uid://b3571hwejk632" path="res://assets/images/circle.svg" id="3_wunpd"]
+[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://player/equipment/equipment.tscn" id="1_htuq3"]
+[ext_resource type="Script" path="res://player/equipment/thrusters/thrusters.gd" id="2_ni7yn"]
+[ext_resource type="Texture2D" uid="uid://clrym8axr6q23" path="res://assets/images/box.svg" id="3_xi573"]
 
 [sub_resource type="Gradient" id="Gradient_vcqdl"]
 offsets = PackedFloat32Array(0, 0.478395, 1)
@@ -23,18 +23,19 @@ particle_flag_disable_z = true
 gravity = Vector3(0, 0, 0)
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
-scale_min = 0.07
-scale_max = 0.07
+angle_max = 720.0
+scale_min = 0.1
+scale_max = 0.1
 scale_curve = SubResource("CurveTexture_n4722")
 color_ramp = SubResource("GradientTexture1D_w5tbn")
 
-[node name="Thrusters" instance=ExtResource("1_01m3c")]
-script = ExtResource("2_j4ixl")
+[node name="Thrusters" instance=ExtResource("1_htuq3")]
+script = ExtResource("2_ni7yn")
 
 [node name="Trail" type="GPUParticles2D" parent="." index="0"]
 show_behind_parent = true
 position = Vector2(-14, 0)
 amount = 32
 process_material = SubResource("ParticleProcessMaterial_47pxo")
-texture = ExtResource("3_wunpd")
+texture = ExtResource("3_xi573")
 lifetime = 2.0

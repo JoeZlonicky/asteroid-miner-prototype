@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_dvebg"]
 [ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/images/player_ship.svg" id="2_p65gm"]
-[ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://data/equipment/blaster/blaster.tscn" id="3_45gt5"]
-[ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://data/equipment/thrusters/thrusters.tscn" id="4_b6qkp"]
+[ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://player/blaster/blaster.tscn" id="3_45gt5"]
+[ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://player/thrusters/thrusters.tscn" id="4_b6qkp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wm4o"]
 radius = 25.0799
