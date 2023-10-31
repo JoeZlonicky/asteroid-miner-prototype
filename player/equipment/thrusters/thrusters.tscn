@@ -1,41 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5xxfcf4yrqqj"]
+[gd_scene load_steps=4 format=3 uid="uid://c5xxfcf4yrqqj"]
 
 [ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://player/equipment/equipment.tscn" id="1_htuq3"]
 [ext_resource type="Script" path="res://player/equipment/thrusters/thrusters.gd" id="2_ni7yn"]
-[ext_resource type="Texture2D" uid="uid://clrym8axr6q23" path="res://assets/images/box.svg" id="3_xi573"]
-
-[sub_resource type="Gradient" id="Gradient_vcqdl"]
-offsets = PackedFloat32Array(0, 0.478395, 1)
-colors = PackedColorArray(1, 0.636866, 0.0738726, 1, 0.792177, 0, 0.290383, 0.506173, 0.952941, 0, 0.243137, 0.372549)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_w5tbn"]
-gradient = SubResource("Gradient_vcqdl")
-
-[sub_resource type="Curve" id="Curve_i5obm"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_n4722"]
-curve = SubResource("Curve_i5obm")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_47pxo"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 0, 0)
-orbit_velocity_min = 0.0
-orbit_velocity_max = 0.0
-angle_max = 720.0
-scale_min = 0.1
-scale_max = 0.1
-scale_curve = SubResource("CurveTexture_n4722")
-color_ramp = SubResource("GradientTexture1D_w5tbn")
+[ext_resource type="PackedScene" uid="uid://dy3hoscn5tnmm" path="res://player/equipment/thrusters/trail.tscn" id="3_5hlhw"]
 
 [node name="Thrusters" instance=ExtResource("1_htuq3")]
 script = ExtResource("2_ni7yn")
 
-[node name="Trail" type="GPUParticles2D" parent="." index="0"]
-show_behind_parent = true
-position = Vector2(-14, 0)
-amount = 32
-process_material = SubResource("ParticleProcessMaterial_47pxo")
-texture = ExtResource("3_xi573")
-lifetime = 2.0
+[node name="Trail" parent="." index="0" instance=ExtResource("3_5hlhw")]
+position = Vector2(-14, -9)
+
+[node name="Trail2" parent="." index="1" instance=ExtResource("3_5hlhw")]
+position = Vector2(-14, 10)
