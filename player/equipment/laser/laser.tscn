@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnbdh6jy7k1v2"]
+
+[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://player/equipment/equipment.tscn" id="1_28j7r"]
+
+[node name="Laser" instance=ExtResource("1_28j7r")]
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="0"]
+rotation = -1.57079
+
+[node name="ColorRect" type="ColorRect" parent="." index="1"]
+offset_left = -1.0
+offset_top = -16.0
+offset_right = 3.0
+offset_bottom = 160.0
+rotation = -1.46394
+
+[node name="ColorRect2" type="ColorRect" parent="." index="2"]
+offset_left = -1.0
+offset_top = 19.0
+offset_right = 3.0
+offset_bottom = 195.0
+rotation = -1.66349
+
+[node name="ColorRect3" type="ColorRect" parent="." index="3"]
+offset_left = 167.0
+offset_top = 7.0
+offset_right = 180.0
+offset_bottom = 20.0
+rotation = -1.66349

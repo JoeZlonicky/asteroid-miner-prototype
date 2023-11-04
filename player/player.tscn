@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvsf1cud8uuvo"]
+[gd_scene load_steps=7 format=3 uid="uid://bvsf1cud8uuvo"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_dvebg"]
 [ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/images/player_ship.svg" id="2_p65gm"]
 [ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://player/equipment/blaster/blaster.tscn" id="3_45gt5"]
+[ext_resource type="PackedScene" uid="uid://dnbdh6jy7k1v2" path="res://player/equipment/laser/laser.tscn" id="4_3lho6"]
 [ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://player/equipment/thrusters/thrusters.tscn" id="4_b6qkp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wm4o"]
@@ -20,6 +21,9 @@ shape = SubResource("CircleShape2D_2wm4o")
 
 [node name="Thrusters" parent="." instance=ExtResource("4_b6qkp")]
 position = Vector2(-6, 0)
+
+[node name="Laser" parent="." instance=ExtResource("4_3lho6")]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708

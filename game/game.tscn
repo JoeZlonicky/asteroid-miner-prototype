@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://fwlb35x2ys72"]
+[gd_scene load_steps=10 format=3 uid="uid://fwlb35x2ys72"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_rx8ei"]
 [ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://game/background/background.tscn" id="2_erpy7"]
 [ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://assets/fonts/ChakraPetch-Regular.ttf" id="4_26d38"]
 [ext_resource type="PackedScene" uid="uid://b3y64k6mykthg" path="res://lost_transmission/lost_transmission.tscn" id="4_knh08"]
 [ext_resource type="PackedScene" uid="uid://bvsf1cud8uuvo" path="res://player/player.tscn" id="5_aldug"]
+[ext_resource type="Texture2D" uid="uid://p6vmxt5j72er" path="res://assets/images/asteroid.svg" id="6_mboyv"]
 
 [sub_resource type="Animation" id="Animation_kryqb"]
 length = 0.001
@@ -93,7 +94,6 @@ position = Vector2(2133, 1495)
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(51, 3)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -135,3 +135,8 @@ root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_r017c")
 }
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(310, 247)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_mboyv")
