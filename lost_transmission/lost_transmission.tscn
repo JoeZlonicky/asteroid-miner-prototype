@@ -205,10 +205,10 @@ position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_d2x0q")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "float"
 libraries = {
 "": SubResource("AnimationLibrary_cls1f")
 }
+autoplay = "float"
 
 [node name="PickedUpAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

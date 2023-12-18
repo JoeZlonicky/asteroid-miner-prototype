@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="174.3316mm"
-   height="158.56702mm"
-   viewBox="0 0 174.3316 158.56702"
+   width="176.72076mm"
+   height="161.05788mm"
+   viewBox="0 0 176.72076 161.05788"
    version="1.1"
    id="svg1"
    sodipodi:docname="asteroid.svg"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.091423787"
-     inkscape:cx="-929.73616"
-     inkscape:cy="1460.2327"
+     inkscape:zoom="0.73139029"
+     inkscape:cx="250.20841"
+     inkscape:cy="126.47146"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
@@ -38,9 +38,9 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(5.3239993,-69.192157)">
+     transform="translate(6.5470486,-68.075419)">
     <path
-       style="fill:#262626;stroke:#ffffff;stroke-width:3;stroke-dasharray:none"
+       style="fill:#222e4d;fill-opacity:1;stroke:#aab2bc;stroke-width:5;stroke-dasharray:none;stroke-opacity:1"
        d="M -3.4894253,124.40686 23.425891,88.255984 63.073303,70.867264 96.354671,89.678504 126.742,88.231464 167.25845,134.53598 133.97707,212.67482 105.03676,198.20466 29.791939,225.69798 22.556867,163.4763 Z"
        id="path1"
        sodipodi:nodetypes="ccccccccccc" />

@@ -89,11 +89,13 @@ position = Vector2(-842, 2296)
 position = Vector2(2133, 1495)
 
 [node name="Player" parent="." instance=ExtResource("5_aldug")]
+position = Vector2(610, 403)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(610, 403)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 

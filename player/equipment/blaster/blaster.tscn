@@ -7,17 +7,8 @@
 script = ExtResource("2_2rlo4")
 
 [node name="Point1" type="Marker2D" parent="." index="0"]
-position = Vector2(23, -3)
+position = Vector2(23, 0)
 
-[node name="Point2" type="Marker2D" parent="." index="1"]
-position = Vector2(23, 3)
-
-[node name="Point3" type="Marker2D" parent="." index="2"]
-position = Vector2(12, -14)
-
-[node name="Point4" type="Marker2D" parent="." index="3"]
-position = Vector2(12, 12)
-
-[node name="Cooldown" type="Timer" parent="." index="4"]
-wait_time = 0.05
+[node name="Cooldown" type="Timer" parent="." index="1"]
+wait_time = 0.25
 one_shot = true

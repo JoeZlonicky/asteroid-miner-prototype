@@ -1,7 +1,7 @@
 extends Area2D
 
 
-const SPEED: float = 600.0
+const SPEED: float = 800.0
 
 var velocity: Vector2
 

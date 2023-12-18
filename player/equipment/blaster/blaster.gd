@@ -7,10 +7,7 @@ var point_index: int = 0
 
 @onready var cooldown_timer: Timer = $Cooldown
 @onready var points: Array = [
-	$Point1,
-	$Point2,
-	$Point3,
-	$Point4
+	$Point1
 ]
 
 func active_update(_delta: float) -> void:
