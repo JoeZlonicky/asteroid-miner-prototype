@@ -1,14 +1,102 @@
-[gd_scene load_steps=5 format=3 uid="uid://drufal4f2uggw"]
+[gd_scene load_steps=9 format=3 uid="uid://drufal4f2uggw"]
 
 [ext_resource type="Script" path="res://projectiles/projectile.gd" id="1_q7kbu"]
 [ext_resource type="Texture2D" uid="uid://cbjvxn16yhehg" path="res://assets/images/laser.svg" id="2_i4l73"]
 [ext_resource type="Texture2D" uid="uid://bpl0ul6oo7q11" path="res://assets/images/laser_glow.png" id="3_v7r88"]
+[ext_resource type="Texture2D" uid="uid://oqo5ythjpflf" path="res://assets/images/circle_with_glow.png" id="4_al25l"]
+
+[sub_resource type="Animation" id="Animation_gfvjw"]
+resource_name = "explode"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.15, 0.15), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_csqgo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_muu3d"]
+_data = {
+"RESET": SubResource("Animation_csqgo"),
+"explode": SubResource("Animation_gfvjw")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7obrq"]
 size = Vector2(7, 7)
 
 [node name="Projectile" type="Area2D"]
 position = Vector2(203, -33)
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_q7kbu")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -16,11 +104,28 @@ position = Vector2(22.625, 0.375)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_i4l73")
 
-[node name="Glow" type="Sprite2D" parent="."]
+[node name="Glow" type="Sprite2D" parent="Sprite"]
 modulate = Color(1, 1, 1, 0.243137)
-position = Vector2(5, 0)
-scale = Vector2(0.410853, 0.425)
+position = Vector2(-70.5, -1.5)
+scale = Vector2(1.64341, 1.7)
 texture = ExtResource("3_v7r88")
+
+[node name="Explosion" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(51, 0.5)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("4_al25l")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Explosion"]
+libraries = {
+"": SubResource("AnimationLibrary_muu3d")
+}
+
+[node name="Explosion2" type="Sprite2D" parent="Explosion"]
+modulate = Color(1, 0.505882, 0.505882, 0.686275)
+show_behind_parent = true
+scale = Vector2(3, 3)
+texture = ExtResource("4_al25l")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2(51.5, 0.5)
@@ -31,4 +136,5 @@ wait_time = 3.0
 one_shot = true
 autostart = true
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Lifespan" to="." method="_on_lifespan_timeout"]

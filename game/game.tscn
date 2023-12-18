@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://assets/fonts/ChakraPetch-Regular.ttf" id="4_26d38"]
 [ext_resource type="PackedScene" uid="uid://b3y64k6mykthg" path="res://lost_transmission/lost_transmission.tscn" id="4_knh08"]
 [ext_resource type="PackedScene" uid="uid://bvsf1cud8uuvo" path="res://player/player.tscn" id="5_aldug"]
-[ext_resource type="Texture2D" uid="uid://p6vmxt5j72er" path="res://assets/images/asteroid.svg" id="6_mboyv"]
+[ext_resource type="PackedScene" uid="uid://ctr02p2rxntst" path="res://asteroid/asteroid.tscn" id="6_8y7lx"]
 
 [sub_resource type="Animation" id="Animation_kryqb"]
 length = 0.001
@@ -138,7 +138,4 @@ libraries = {
 "": SubResource("AnimationLibrary_r017c")
 }
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(310, 247)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("6_mboyv")
+[node name="Asteroid" parent="." instance=ExtResource("6_8y7lx")]

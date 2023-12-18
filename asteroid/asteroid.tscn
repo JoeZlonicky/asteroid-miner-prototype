@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctr02p2rxntst"]
+
+[ext_resource type="Texture2D" uid="uid://p6vmxt5j72er" path="res://assets/images/asteroid.svg" id="1_juu16"]
+
+[node name="Asteroid" type="AnimatableBody2D"]
+position = Vector2(386, 306)
+collision_layer = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_juu16")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-17, -76, 14, -58, 43, -59, 83, -14, 50, 64, 22, 50, -51, 76, -58, 15, -83, -23, -56, -59)
