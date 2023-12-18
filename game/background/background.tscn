@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cac3tpqtq4fos"]
 
-[ext_resource type="Shader" path="res://game/background/stars.gdshader" id="1_y1l0r"]
+[ext_resource type="Shader" path="res://assets/shaders/stars.gdshader" id="1_y1l0r"]
 [ext_resource type="Script" path="res://game/background/background.gd" id="2_2wp3b"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jcras"]

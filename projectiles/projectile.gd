@@ -25,3 +25,5 @@ func _on_lifespan_timeout() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	set_physics_process(false)
 	explosion_animator.play("explode")
+	if body is Asteroid:
+		body.take_damage()
