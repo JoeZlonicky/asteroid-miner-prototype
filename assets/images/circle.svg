@@ -2,13 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="17.470158mm"
-   height="17.470158mm"
-   viewBox="0 0 17.470158 17.470158"
+   width="36.670158mm"
+   height="36.670158mm"
+   viewBox="0 0 36.670159 36.670159"
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="circle.svg"
+   inkscape:export-filename="circle_glow.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,25 +26,53 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.73139029"
-     inkscape:cx="-27.345181"
-     inkscape:cy="93.657245"
+     inkscape:zoom="5.8511223"
+     inkscape:cx="63.919361"
+     inkscape:cy="76.822869"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g1" />
   <defs
-     id="defs1" />
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Blur"
+       id="filter1"
+       x="-0.767096"
+       y="-0.767096"
+       width="2.534192"
+       height="2.534192">
+      <feGaussianBlur
+         stdDeviation="4 4"
+         result="blur"
+         id="feGaussianBlur1" />
+    </filter>
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-82.788671,-113.89951)">
+     transform="translate(-73.188672,-104.29951)"
+     style="display:inline">
     <circle
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3"
        id="path1"
+       cx="91.52375"
+       cy="122.63459"
+       r="7.2350788" />
+  </g>
+  <g
+     inkscape:label="Glow"
+     inkscape:groupmode="layer"
+     id="g1"
+     transform="translate(-73.188672,-104.29951)"
+     style="display:none">
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3;filter:url(#filter1)"
+       id="circle1"
        cx="91.52375"
        cy="122.63459"
        r="7.2350788" />

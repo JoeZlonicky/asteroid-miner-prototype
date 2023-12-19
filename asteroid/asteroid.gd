@@ -1,7 +1,7 @@
 class_name Asteroid
 extends AnimatableBody2D
 
-const MAX_HEALTH: int = 10
+const MAX_HEALTH: int = 20
 
 var current_health: int = MAX_HEALTH
 

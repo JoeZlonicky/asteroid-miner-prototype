@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c27ekeeh0lfv1"
-path="res://.godot/imported/background.png-e5ebdd33902457fb65ba6af20f80797b.ctex"
+uid="uid://1k2dtdca40ao"
+path="res://.godot/imported/circle_glow.png-68a6c669d2e5b179416b6056e8ad7c92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/background.png"
-dest_files=["res://.godot/imported/background.png-e5ebdd33902457fb65ba6af20f80797b.ctex"]
+source_file="res://assets/images/circle_glow.png"
+dest_files=["res://.godot/imported/circle_glow.png-68a6c669d2e5b179416b6056e8ad7c92.ctex"]
 
 [params]
 

@@ -1,16 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://dy3hoscn5tnmm"]
+[gd_scene load_steps=9 format=3 uid="uid://dy3hoscn5tnmm"]
 
-[ext_resource type="Texture2D" uid="uid://oqo5ythjpflf" path="res://assets/images/circle_with_glow.png" id="1_mvkhx"]
+[ext_resource type="Texture2D" uid="uid://b3571hwejk632" path="res://assets/images/circle.svg" id="1_jnkvt"]
+
+[sub_resource type="Curve" id="Curve_maiin"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_movmc"]
+curve = SubResource("Curve_maiin")
 
 [sub_resource type="Gradient" id="Gradient_vcqdl"]
-offsets = PackedFloat32Array(0, 0.478395, 1)
-colors = PackedColorArray(1, 0.715, 0.43, 1, 0.792177, 0, 0.290383, 0.506173, 0.952941, 0, 0.243137, 0)
+offsets = PackedFloat32Array(0, 0.543408)
+colors = PackedColorArray(0.921569, 0.929412, 0.913725, 1, 0.854902, 0.52549, 0.243137, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_w5tbn"]
 gradient = SubResource("Gradient_vcqdl")
 
 [sub_resource type="Curve" id="Curve_i5obm"]
-_data = [Vector2(0, 1), 6.54141, -1.63411, 0, 0, Vector2(1, 0.0208575), -0.403153, 0.0, 0, 0]
+_data = [Vector2(0, 1), 6.54141, -0.870444, 0, 0, Vector2(1, 0.133835), -0.403153, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_n4722"]
@@ -28,11 +35,12 @@ scale_min = 0.15
 scale_max = 0.15
 scale_curve = SubResource("CurveTexture_n4722")
 color_ramp = SubResource("GradientTexture1D_w5tbn")
+alpha_curve = SubResource("CurveTexture_movmc")
 
 [node name="Trail" type="GPUParticles2D"]
 show_behind_parent = true
 position = Vector2(-14, 0)
 amount = 256
 process_material = SubResource("ParticleProcessMaterial_47pxo")
-texture = ExtResource("1_mvkhx")
+texture = ExtResource("1_jnkvt")
 lifetime = 0.5

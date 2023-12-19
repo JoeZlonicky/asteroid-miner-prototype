@@ -8,11 +8,8 @@
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_dvebg")
 
-[node name="CollisionPolygon" type="CollisionPolygon2D" parent="."]
-position = Vector2(0, 4)
-polygon = PackedVector2Array(29, -4, -29, -41, -16, -4, -29, 34)
-
 [node name="Blaster" parent="." instance=ExtResource("3_45gt5")]
+position = Vector2(39, 0)
 
 [node name="Thrusters" parent="." instance=ExtResource("4_b6qkp")]
 position = Vector2(-6, 0)
@@ -21,3 +18,8 @@ position = Vector2(-6, 0)
 rotation = 1.5708
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_p65gm")
+
+[node name="CollisionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(0, 4)
+polygon = PackedVector2Array(29, -4, -29, -41, -16, -4, -29, 34)
