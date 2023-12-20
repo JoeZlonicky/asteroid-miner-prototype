@@ -3,14 +3,11 @@ extends Node2D
 
 @onready var player: CharacterBody2D = $Player
 @onready var speed_label: Label = $HUD/SpeedLabel
-@onready var transmission_container: Node2D = $Transmissions
 @onready var transmission_found_animator: AnimationPlayer = $HUD/TransmissionFoundText/AnimationPlayer
 
 
 func _ready() -> void:
 	DisplayServer.window_set_min_size(Vector2(800, 600))
-	for child in transmission_container.get_children():
-		child.picked_up.connect(_on_transmission_picked_up)
 
 
 func _physics_process(_delta: float) -> void:

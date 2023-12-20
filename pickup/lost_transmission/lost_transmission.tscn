@@ -1,0 +1,119 @@
+[gd_scene load_steps=6 format=3 uid="uid://5wvss0ur25mc"]
+
+[ext_resource type="PackedScene" uid="uid://khb2p6ufatqq" path="res://pickup/pick_up.tscn" id="1_ljedc"]
+[ext_resource type="Texture2D" uid="uid://clrym8axr6q23" path="res://assets/images/box.svg" id="2_by838"]
+
+[sub_resource type="Animation" id="Animation_1j6rl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0918808, 6.09191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0918808, 0.0919132)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0918808, -8.90812)]
+}
+
+[sub_resource type="Animation" id="Animation_0pq68"]
+resource_name = "float"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0918808, 6.09191)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.0918808, 0.0919132), Vector2(0.092, -5), Vector2(0.0918808, 0.0919132)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D3:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.0918808, -8.90812), Vector2(0.092, -18), Vector2(0.0918808, -8.90812)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cls1f"]
+_data = {
+"RESET": SubResource("Animation_1j6rl"),
+"float": SubResource("Animation_0pq68")
+}
+
+[node name="LostTransmission" instance=ExtResource("1_ljedc")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+modulate = Color(0.886275, 0.717647, 0.423529, 1)
+position = Vector2(0.0918808, 6.09191)
+rotation = 0.785398
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_by838")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1"]
+modulate = Color(0.886275, 0.717647, 0.423529, 1)
+position = Vector2(0.0918808, 0.0919132)
+rotation = 0.785398
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("2_by838")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="2"]
+modulate = Color(0.886275, 0.717647, 0.423529, 1)
+position = Vector2(0.0918808, -8.90812)
+rotation = 0.785398
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_by838")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_cls1f")
+}
+autoplay = "float"
