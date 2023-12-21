@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://drufal4f2uggw"]
 
 [ext_resource type="Script" path="res://projectiles/projectile.gd" id="1_q7kbu"]
-[ext_resource type="Texture2D" uid="uid://cbjvxn16yhehg" path="res://assets/images/laser.svg" id="2_i4l73"]
-[ext_resource type="Texture2D" uid="uid://bpl0ul6oo7q11" path="res://assets/images/laser_glow.png" id="3_v7r88"]
-[ext_resource type="Texture2D" uid="uid://b3571hwejk632" path="res://assets/images/circle.svg" id="4_go515"]
-[ext_resource type="Texture2D" uid="uid://1k2dtdca40ao" path="res://assets/images/circle_glow.png" id="5_2lhch"]
+[ext_resource type="Texture2D" uid="uid://cbjvxn16yhehg" path="res://assets/art/laser/laser.svg" id="2_i4l73"]
+[ext_resource type="Texture2D" uid="uid://bpl0ul6oo7q11" path="res://assets/art/laser/laser_glow.png" id="3_v7r88"]
+[ext_resource type="Texture2D" uid="uid://b3571hwejk632" path="res://assets/art/circle/circle.svg" id="4_go515"]
+[ext_resource type="Texture2D" uid="uid://1k2dtdca40ao" path="res://assets/art/circle/circle_glow.png" id="5_2lhch"]
 
 [sub_resource type="Animation" id="Animation_csqgo"]
 length = 0.001

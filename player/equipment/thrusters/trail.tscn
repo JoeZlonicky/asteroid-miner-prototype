@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dy3hoscn5tnmm"]
 
-[ext_resource type="Texture2D" uid="uid://b3571hwejk632" path="res://assets/images/circle.svg" id="1_jnkvt"]
+[ext_resource type="Texture2D" uid="uid://b3571hwejk632" path="res://assets/art/circle/circle.svg" id="1_jnkvt"]
 
 [sub_resource type="Curve" id="Curve_maiin"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]

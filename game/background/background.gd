@@ -1,8 +1,8 @@
 extends CanvasLayer
 
 
-const FAR_PARALLAX: float = 0.1
-const MEDIUM_PARALLAX: float = 0.2
+const FAR_PARALLAX: float = 0.025
+const MEDIUM_PARALLAX: float = 0.1
 const CLOSE_PARALLAX: float = 1.0
 
 @export var camera: Camera2D = null

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbjvxn16yhehg"
-path="res://.godot/imported/laser.svg-7e32ea3317ab8b1aee26a89f0c5f4955.ctex"
+uid="uid://bpl0ul6oo7q11"
+path="res://.godot/imported/laser_glow.png-77ca4798b96f8d99b468c561a1eefc63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/laser.svg"
-dest_files=["res://.godot/imported/laser.svg-7e32ea3317ab8b1aee26a89f0c5f4955.ctex"]
+source_file="res://assets/art/laser/laser_glow.png"
+dest_files=["res://.godot/imported/laser_glow.png-77ca4798b96f8d99b468c561a1eefc63.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

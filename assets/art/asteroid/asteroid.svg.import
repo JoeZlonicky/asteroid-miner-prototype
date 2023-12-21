@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b20drp06672nl"
-path="res://.godot/imported/ore.svg-8e35ed38acd8855d5dc6784437c17487.ctex"
+uid="uid://p6vmxt5j72er"
+path="res://.godot/imported/asteroid.svg-4fcc13b4d839587677d15910e07677c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/ore.svg"
-dest_files=["res://.godot/imported/ore.svg-8e35ed38acd8855d5dc6784437c17487.ctex"]
+source_file="res://assets/art/asteroid/asteroid.svg"
+dest_files=["res://.godot/imported/asteroid.svg-4fcc13b4d839587677d15910e07677c4.ctex"]
 
 [params]
 

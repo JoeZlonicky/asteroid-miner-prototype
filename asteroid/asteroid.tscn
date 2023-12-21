@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://ctr02p2rxntst"]
 
 [ext_resource type="Script" path="res://asteroid/asteroid.gd" id="1_but43"]
-[ext_resource type="Texture2D" uid="uid://p6vmxt5j72er" path="res://assets/images/asteroid.svg" id="1_juu16"]
 [ext_resource type="Shader" path="res://assets/shaders/flash.gdshader" id="2_lblnn"]
+[ext_resource type="Texture2D" uid="uid://p6vmxt5j72er" path="res://assets/art/asteroid/asteroid.svg" id="3_gckv0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w7kl3"]
 shader = ExtResource("2_lblnn")
@@ -55,7 +55,7 @@ script = ExtResource("1_but43")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_w7kl3")
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_juu16")
+texture = ExtResource("3_gckv0")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false

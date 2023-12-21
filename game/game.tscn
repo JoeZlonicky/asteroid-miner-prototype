@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_rx8ei"]
 [ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://game/background/background.tscn" id="2_erpy7"]
-[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://assets/fonts/ChakraPetch-Regular.ttf" id="4_26d38"]
+[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://assets/fonts/chakra_petch_regular.ttf" id="4_26d38"]
 [ext_resource type="PackedScene" uid="uid://bvsf1cud8uuvo" path="res://player/player.tscn" id="5_aldug"]
 [ext_resource type="PackedScene" uid="uid://ctr02p2rxntst" path="res://asteroid/asteroid.tscn" id="6_8y7lx"]
 

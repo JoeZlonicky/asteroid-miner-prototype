@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://5wvss0ur25mc"]
 
 [ext_resource type="PackedScene" uid="uid://khb2p6ufatqq" path="res://pickup/pick_up.tscn" id="1_ljedc"]
-[ext_resource type="Texture2D" uid="uid://clrym8axr6q23" path="res://assets/images/box.svg" id="2_by838"]
+[ext_resource type="Texture2D" uid="uid://clrym8axr6q23" path="res://assets/art/box.svg" id="2_by838"]
 
 [sub_resource type="Animation" id="Animation_1j6rl"]
 length = 0.001
