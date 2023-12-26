@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cllfewrhima3a"]
+
+[ext_resource type="PackedScene" uid="uid://khb2p6ufatqq" path="res://data/pick_ups/pick_up.tscn" id="1_iwq08"]
+[ext_resource type="Script" path="res://data/pick_ups/ore/ore.gd" id="2_8mo4b"]
+[ext_resource type="Texture2D" uid="uid://b20drp06672nl" path="res://assets/art/ore/ore.svg" id="3_wxdmi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_errie"]
+radius = 8.06226
+
+[node name="Ore" instance=ExtResource("1_iwq08")]
+script = ExtResource("2_8mo4b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_wxdmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_errie")
+
+[connection signal="picked_up" from="." to="." method="_on_picked_up"]

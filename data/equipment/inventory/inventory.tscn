@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnaqqxwvavivp"]
+
+[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://data/equipment/equipment.tscn" id="1_bxytn"]
+[ext_resource type="Script" path="res://data/equipment/inventory/inventory.gd" id="2_idxbh"]
+
+[node name="Inventory" instance=ExtResource("1_bxytn")]
+script = ExtResource("2_idxbh")
