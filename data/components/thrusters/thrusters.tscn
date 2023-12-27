@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5xxfcf4yrqqj"]
+
+[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://data/components/component.tscn" id="1_ns3dv"]
+[ext_resource type="Script" path="res://data/components/thrusters/thrusters.gd" id="2_ttra4"]
+[ext_resource type="PackedScene" uid="uid://dy3hoscn5tnmm" path="res://data/components/thrusters/trail/trail.tscn" id="3_sjvwb"]
+
+[node name="Thrusters" instance=ExtResource("1_ns3dv")]
+script = ExtResource("2_ttra4")
+
+[node name="Trail" parent="." index="0" instance=ExtResource("3_sjvwb")]
+position = Vector2(-16, -11)
+
+[node name="Trail2" parent="." index="1" instance=ExtResource("3_sjvwb")]
+position = Vector2(-16, 11)
