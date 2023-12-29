@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxootfqdi7tqi"]
+
+[ext_resource type="PackedScene" uid="uid://cl6bwv730eyaq" path="res://data/entities/entity.tscn" id="1_moobc"]
+[ext_resource type="Texture2D" uid="uid://c764rtjdqsc0r" path="res://assets/art/space_station/space_station.svg" id="2_xp3r1"]
+[ext_resource type="PackedScene" uid="uid://b43vj03bxa5lh" path="res://data/components/interact_area/interact_area.tscn" id="3_vhmlw"]
+
+[node name="SpaceStation" instance=ExtResource("1_moobc")]
+collision_layer = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_xp3r1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(-251, -155, -215, -155, -213, -190, -165, -189, -165, -156, -76, -156, -76, -174, 34, -174, 34, -155, 148, -155, 148, -98, 178, -98, 181, -128, 214, -130, 215, -101, 249, -98, 249, -53, 217, -52, 214, -22, 182, -21, 179, -55, 147, -53, 147, 8, 111, 12, 111, 40, 160, 44, 163, 76, 112, 78, 112, 106, 162, 108, 164, 141, 112, 141, 111, 187, 20, 191, 15, 143, -26, 142, -26, 109, 17, 109, 18, 75, -30, 78, -30, 44, 19, 44, 18, 9, -163, 12, -162, 57, -215, 52, -213, 9, -247, 13)
+
+[node name="InteractArea" parent="." index="2" instance=ExtResource("3_vhmlw")]
+position = Vector2(-24, -168)
+
+[connection signal="interacted" from="InteractArea" to="." method="_on_interact_area_interacted"]
