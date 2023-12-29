@@ -4,7 +4,7 @@ extends Entity
 const ORE_DATA: ItemData = preload("uid://detpa4q3sm7m0")
 
 const N_ORE_DROPPED = 5
-const MAX_HEALTH: int = 3
+const MAX_HEALTH: int = 20
 
 var current_health: int = MAX_HEALTH
 

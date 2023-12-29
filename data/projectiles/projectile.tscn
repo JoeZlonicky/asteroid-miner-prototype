@@ -118,7 +118,7 @@ scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("4_go515")
 
 [node name="Glow" type="Sprite2D" parent="Explosion"]
-texture = ExtResource("5_2lhch")
+texture = ExtResource("4_go515")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Explosion"]
 libraries = {
