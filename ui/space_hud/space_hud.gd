@@ -3,7 +3,7 @@ extends CanvasLayer
 
 @export var player_ship: Player
 
-@onready var speed_label = $SpeedLabel
+@onready var speed_label: Label = $SpeedLabel
 
 
 func _physics_process(_delta: float) -> void:

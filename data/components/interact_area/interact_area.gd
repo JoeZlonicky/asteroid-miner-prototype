@@ -3,9 +3,9 @@ extends Component
 
 signal interacted
 
-var is_player_inside = false
+var is_player_inside: bool = false
 
-@onready var label = $Label
+@onready var label: Label = $Label
 
 
 func _input(event: InputEvent) -> void:

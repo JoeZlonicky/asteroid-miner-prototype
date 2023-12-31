@@ -25,6 +25,6 @@ func active_update(_delta: float) -> void:
 
 
 func spawn_projectile(spawn_position: Vector2) -> void:
-	var projectile = PROJECTILE_SCENE.instantiate()
+	var projectile: Projectile = PROJECTILE_SCENE.instantiate()
 	owner.get_parent().add_child(projectile)
 	projectile.fire(spawn_position, global_rotation, owner.velocity.length())

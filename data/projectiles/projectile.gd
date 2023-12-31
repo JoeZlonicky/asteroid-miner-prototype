@@ -1,3 +1,4 @@
+class_name Projectile
 extends Area2D
 
 
@@ -5,7 +6,7 @@ const SPEED: float = 800.0
 
 var velocity: Vector2
 
-@onready var explosion_animator = $Explosion/AnimationPlayer
+@onready var explosion_animator: AnimationPlayer = $Explosion/AnimationPlayer
 
 
 func fire(g_position: Vector2, angle: float, bonus_speed: float = 0.0) -> void:
