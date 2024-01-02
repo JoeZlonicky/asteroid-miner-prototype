@@ -22,20 +22,14 @@ func active_update(delta: float) -> void:
 		pickup.position += direction * affected_pickups[pickup] * delta
 
 
-func _on_vacuum_area_body_entered(body: Node2D) -> void:
-	var as_pickup: Pickup = body as Pickup
-	if not as_pickup:
-		return
-	
-	if not affected_pickups.has(as_pickup):
-		affected_pickups[as_pickup] = 0
-		as_pickup.is_drifting = false
+func _on_vacuum_area_body_entered(pickup: Pickup) -> void:
+	if not affected_pickups.has(pickup):
+		affected_pickups[pickup] = 0
+		pickup.stop_drifting()
 
 
-func _on_pickup_area_body_entered(body: Node2D) -> void:
-	var as_pickup: Pickup = body as Pickup
-	if not as_pickup:
-		return
-		
-	item_pickup.emit(as_pickup.item_data)
-	as_pickup.queue_free()
+func _on_pickup_area_body_entered(pickup: Pickup) -> void:
+	if affected_pickups.has(pickup):
+		affected_pickups.erase(pickup)
+	item_pickup.emit(pickup.item_data)
+	pickup.queue_free()

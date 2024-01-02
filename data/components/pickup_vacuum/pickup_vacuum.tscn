@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://data/components/pickup_vacuum/pickup_vacuum.gd" id="2_3hasd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3fp5d"]
-radius = 124.016
+radius = 362.012
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w4ai2"]
 radius = 14.1421
@@ -13,13 +13,13 @@ radius = 14.1421
 script = ExtResource("2_3hasd")
 
 [node name="VacuumArea" type="Area2D" parent="." index="0"]
-collision_mask = 5
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VacuumArea" index="0"]
 shape = SubResource("CircleShape2D_3fp5d")
 
 [node name="PickupArea" type="Area2D" parent="." index="1"]
-collision_mask = 5
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 shape = SubResource("CircleShape2D_w4ai2")

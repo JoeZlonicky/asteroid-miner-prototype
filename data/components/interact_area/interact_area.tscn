@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://data/components/interact_area/interact_area.gd" id="2_k4b5p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vsdt"]
-radius = 78.5175
+radius = 191.212
 
 [node name="InteractArea" instance=ExtResource("1_fpyuk")]
 script = ExtResource("2_k4b5p")
@@ -25,7 +25,7 @@ offset_right = 30.0
 offset_bottom = -59.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_3o0tj")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 64
 text = "E"
 
 [connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]

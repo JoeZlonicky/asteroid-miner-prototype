@@ -12,14 +12,12 @@ var point_index: int = 0
 ]
 
 func active_update(_delta: float) -> void:
-	if not Input.is_action_pressed("shoot"):
-		return
-	
-	if not cooldown_timer.is_stopped():
+	if not Input.is_action_pressed("shoot") or not cooldown_timer.is_stopped():
 		return
 	
 	var blaster_position: Vector2 = points[point_index].global_position
 	spawn_projectile(blaster_position)
+	
 	point_index = wrapi(point_index + 1, 0, points.size())
 	cooldown_timer.start()
 

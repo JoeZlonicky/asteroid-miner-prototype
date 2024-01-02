@@ -1,11 +1,11 @@
 extends Component
 
 
-const FORWARD_THRUST: float = 200.0
-const FORWARD_THRUST_DECELERATION: float = 5.0
-const MAX_FORWARD_THRUST: float = 250.0
+const FORWARD_THRUST: float = 320.0
+const FORWARD_THRUST_DECELERATION: float = 10.0
+const MAX_FORWARD_THRUST: float = 700.0
 
-const SLOW_THRUST: float = 150.0
+const SLOW_THRUST: float = 300.0
 
 const ROTATION_THRUST: float = 2.0
 const ROTATION_THRUST_DECELERATION: float = 2.0

@@ -54,12 +54,10 @@ script = ExtResource("1_but43")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 material = SubResource("ShaderMaterial_osif2")
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_gckv0")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
-visible = false
-polygon = PackedVector2Array(-17, -76, 14, -58, 43, -59, 83, -14, 50, 64, 22, 50, -51, 76, -58, 15, -83, -23, -56, -59)
+polygon = PackedVector2Array(-92, -211, 9, -206, 44, -158, 139, -161, 214, -92, 236, 13, 210, 132, 147, 201, 49, 168, -34, 213, -141, 209, -192, 135, -192, 58, -236, 10, -232, -100, -146, -140)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 libraries = {

@@ -27,3 +27,7 @@ func set_sprite(texture: Texture) -> void:
 	if not is_node_ready():
 		await ready
 	sprite.texture = texture
+
+
+func stop_drifting() -> void:
+	is_drifting = false

@@ -8,7 +8,7 @@
 script = ExtResource("2_ttra4")
 
 [node name="Trail" parent="." index="0" instance=ExtResource("3_sjvwb")]
-position = Vector2(0, -14)
+position = Vector2(0, -42)
 
 [node name="Trail2" parent="." index="1" instance=ExtResource("3_sjvwb")]
-position = Vector2(0, 14)
+position = Vector2(0, 42)

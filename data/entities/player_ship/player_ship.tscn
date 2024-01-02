@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://data/entities/player_ship/player_ship.gd" id="1_dvebg"]
 [ext_resource type="PackedScene" uid="uid://cl6bwv730eyaq" path="res://data/entities/entity.tscn" id="1_xsypm"]
-[ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://data/components/blaster/blaster.tscn" id="2_avet5"]
+[ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://data/components/blasters/blasters.tscn" id="2_avet5"]
 [ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/art/player_ship/player_ship.svg" id="2_p65gm"]
 [ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://data/components/thrusters/thrusters.tscn" id="3_6yd2e"]
 [ext_resource type="PackedScene" uid="uid://dnaqqxwvavivp" path="res://data/components/inventory/inventory.tscn" id="4_lans1"]
@@ -11,12 +11,11 @@
 [node name="PlayerShip" instance=ExtResource("1_xsypm")]
 script = ExtResource("1_dvebg")
 
-[node name="Blaster" parent="." index="0" instance=ExtResource("2_avet5")]
-position = Vector2(31, 0)
-enabled = null
+[node name="Blasters" parent="." index="0" instance=ExtResource("2_avet5")]
+position = Vector2(92, 0)
 
 [node name="Thrusters" parent="." index="1" instance=ExtResource("3_6yd2e")]
-position = Vector2(-37, 0)
+position = Vector2(-130, 1)
 
 [node name="Inventory" parent="." index="2" instance=ExtResource("4_lans1")]
 
@@ -24,12 +23,11 @@ position = Vector2(-37, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="4"]
 rotation = 1.5708
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_p65gm")
 
 [node name="CollisionPolygon" type="CollisionPolygon2D" parent="." index="5"]
 visible = false
 position = Vector2(0, 4)
-polygon = PackedVector2Array(29, -4, -29, -41, -16, -4, -29, 34)
+polygon = PackedVector2Array(102, 16, 101, -23, -18, -114, -80, -114, -79, -6, -81, 106, -16, 104)
 
 [connection signal="item_pickup" from="PickupVacuum" to="." method="_on_pickup_vacuum_item_pickup"]

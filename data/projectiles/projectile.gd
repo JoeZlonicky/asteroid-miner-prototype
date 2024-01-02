@@ -2,7 +2,7 @@ class_name Projectile
 extends Area2D
 
 
-const SPEED: float = 800.0
+const SPEED: float = 2400.0
 
 var velocity: Vector2
 

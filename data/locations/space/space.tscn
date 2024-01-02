@@ -10,7 +10,7 @@
 [node name="SpaceBackground" parent="." index="0" instance=ExtResource("1_wms5o")]
 
 [node name="Asteroid" parent="." index="1" instance=ExtResource("2_mxmhh")]
-position = Vector2(916, 317)
+position = Vector2(2975, 1086)
 
 [node name="SpaceStation" parent="." index="2" instance=ExtResource("4_3gghn")]
-position = Vector2(598, 699)
+position = Vector2(1834, 2754)
