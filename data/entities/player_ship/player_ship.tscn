@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b3sleru8ecrea" path="res://data/components/pickup_vacuum/pickup_vacuum.tscn" id="5_ntd4j"]
 
 [node name="PlayerShip" instance=ExtResource("1_xsypm")]
+collision_layer = 9
 script = ExtResource("1_dvebg")
 
 [node name="Blasters" parent="." index="0" instance=ExtResource("2_avet5")]

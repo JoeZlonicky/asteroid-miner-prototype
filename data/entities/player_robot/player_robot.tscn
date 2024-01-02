@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw2bw2mehkoi5"]
+
+[ext_resource type="PackedScene" uid="uid://cl6bwv730eyaq" path="res://data/entities/entity.tscn" id="1_ufagj"]
+[ext_resource type="Script" path="res://data/entities/player_robot/player_robot.gd" id="2_m1fo2"]
+[ext_resource type="Texture2D" uid="uid://cm5vtj7lj6gad" path="res://assets/art/player_robot/player_robot.svg" id="3_i2mf8"]
+[ext_resource type="PackedScene" uid="uid://da6nuxjpj47d5" path="res://data/components/treads/treads.tscn" id="4_trs02"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsuq2"]
+size = Vector2(162, 44)
+
+[node name="PlayerRobot" instance=ExtResource("1_ufagj")]
+collision_layer = 9
+script = ExtResource("2_m1fo2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_i2mf8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 76)
+shape = SubResource("RectangleShape2D_lsuq2")
+
+[node name="Treads" parent="." index="2" instance=ExtResource("4_trs02")]

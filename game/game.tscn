@@ -1,23 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://fwlb35x2ys72"]
+[gd_scene load_steps=4 format=3 uid="uid://fwlb35x2ys72"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_rx8ei"]
 [ext_resource type="PackedScene" uid="uid://cii8xrotmv763" path="res://ui/space_hud/space_hud.tscn" id="4_rxg3j"]
 [ext_resource type="PackedScene" uid="uid://bgiop2yu368ym" path="res://data/locations/space/space.tscn" id="4_wysg4"]
-[ext_resource type="PackedScene" uid="uid://dhw5ys165sf3g" path="res://data/entities/player_ship/player_ship.tscn" id="5_aldug"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_rx8ei")
 
 [node name="Space" parent="." instance=ExtResource("4_wysg4")]
 
-[node name="Player" parent="." instance=ExtResource("5_aldug")]
-position = Vector2(1924, 1076)
-
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
-remote_path = NodePath("../../Camera2D")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1924, 1076)
-
 [node name="SpaceHUD" parent="." node_paths=PackedStringArray("player_ship") instance=ExtResource("4_rxg3j")]
-player_ship = NodePath("../Player")
+player_ship = NodePath("")

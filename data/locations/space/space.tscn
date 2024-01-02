@@ -14,3 +14,6 @@ position = Vector2(2975, 1086)
 
 [node name="SpaceStation" parent="." index="2" instance=ExtResource("4_3gghn")]
 position = Vector2(1834, 2754)
+
+[node name="DefaultPlayerSpawnMarker" parent="." index="3"]
+position = Vector2(1714, 1057)

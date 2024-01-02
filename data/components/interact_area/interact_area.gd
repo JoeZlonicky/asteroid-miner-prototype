@@ -13,13 +13,11 @@ func _input(event: InputEvent) -> void:
 		interacted.emit()
 
 
-func _on_trigger_area_body_entered(body: Node2D) -> void:
-	if body is Player:
-		is_player_inside = true
-		label.visible = true
+func _on_trigger_area_body_entered(_body: Node2D) -> void:
+	is_player_inside = true
+	label.visible = true
 
 
-func _on_trigger_area_body_exited(body: Node2D) -> void:
-	if body is Player:
-		is_player_inside = false
-		label.visible = false
+func _on_trigger_area_body_exited(_body: Node2D) -> void:
+	is_player_inside = false
+	label.visible = false

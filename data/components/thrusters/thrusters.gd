@@ -61,4 +61,5 @@ func process_rotation(delta: float) -> void:
 		current_rotation_thrust += rotation_input * ROTATION_THRUST * delta
 		current_rotation_thrust = clampf(current_rotation_thrust, -MAX_ROTATION_THRUST, 
 			MAX_ROTATION_THRUST)
+	
 	owner.rotation += current_rotation_thrust * delta

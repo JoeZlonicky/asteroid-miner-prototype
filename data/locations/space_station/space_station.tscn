@@ -1,5 +1,80 @@
-[gd_scene load_steps=2 format=3 uid="uid://cssu3grsdpbqj"]
+[gd_scene load_steps=6 format=3 uid="uid://cssu3grsdpbqj"]
 
 [ext_resource type="PackedScene" uid="uid://bemjvirh1dri8" path="res://data/locations/location.tscn" id="1_ap2yn"]
+[ext_resource type="Script" path="res://data/locations/space_station/space_station.gd" id="2_0r7of"]
+[ext_resource type="PackedScene" uid="uid://cnt2gonn60ik2" path="res://data/entities/docked_player_ship/docked_player_ship.tscn" id="2_6k0w3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vphr"]
+size = Vector2(3839, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1nbw"]
+size = Vector2(53, 2157)
 
 [node name="SpaceStation" instance=ExtResource("1_ap2yn")]
+script = ExtResource("2_0r7of")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="0"]
+layer = -1
+
+[node name="Background" type="ColorRect" parent="CanvasLayer" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.145098, 0.145098, 0.145098, 1)
+
+[node name="Wall" type="StaticBody2D" parent="." index="1"]
+
+[node name="ColorRect" type="ColorRect" parent="Wall" index="0"]
+offset_right = 3840.0
+offset_bottom = 50.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" index="1"]
+position = Vector2(1919.5, 24)
+shape = SubResource("RectangleShape2D_8vphr")
+
+[node name="Wall2" type="StaticBody2D" parent="." index="2"]
+position = Vector2(7, 2110)
+
+[node name="ColorRect" type="ColorRect" parent="Wall2" index="0"]
+offset_right = 3833.0
+offset_bottom = 50.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" index="1"]
+position = Vector2(1914.5, 23.5)
+shape = SubResource("RectangleShape2D_8vphr")
+
+[node name="Wall3" type="StaticBody2D" parent="." index="3"]
+
+[node name="ColorRect" type="ColorRect" parent="Wall3" index="0"]
+offset_right = 53.0
+offset_bottom = 2160.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3" index="1"]
+position = Vector2(26.5, 1078.5)
+shape = SubResource("RectangleShape2D_w1nbw")
+
+[node name="Wall4" type="StaticBody2D" parent="." index="4"]
+position = Vector2(3787, 0)
+
+[node name="ColorRect" type="ColorRect" parent="Wall4" index="0"]
+offset_right = 53.0
+offset_bottom = 2160.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4" index="1"]
+position = Vector2(26.5, 1078.5)
+shape = SubResource("RectangleShape2D_w1nbw")
+
+[node name="DockedPlayerShip" parent="." index="5" instance=ExtResource("2_6k0w3")]
+position = Vector2(1911, 505)
+
+[node name="DefaultPlayerSpawnMarker" parent="." index="6"]
+position = Vector2(2772, 635)
+spawn_type = 1
+
+[connection signal="interacted_with" from="DockedPlayerShip" to="." method="_on_docked_player_ship_interacted_with"]
