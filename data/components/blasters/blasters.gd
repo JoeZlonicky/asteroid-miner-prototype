@@ -1,7 +1,7 @@
 extends Component
 
 
-const PROJECTILE_SCENE: PackedScene = preload("uid://drufal4f2uggw")
+const PROJECTILE_SCENE: PackedScene = preload("uid://bhpuqbiokova")
 
 var point_index: int = 0
 
@@ -24,5 +24,5 @@ func active_update(_delta: float) -> void:
 
 func spawn_projectile(spawn_position: Vector2) -> void:
 	var projectile: Projectile = PROJECTILE_SCENE.instantiate()
-	owner.get_parent().add_child(projectile)
-	projectile.fire(spawn_position, global_rotation, owner.velocity.length())
+	entity.get_parent().add_child(projectile)
+	projectile.fire(spawn_position, global_rotation, entity.velocity.length())

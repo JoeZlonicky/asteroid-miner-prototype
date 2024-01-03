@@ -32,17 +32,17 @@ func process_velocity(delta: float) -> void:
 		forward_input = -1
 	
 	if forward_input > 0:
-		var direction := Vector2(cos(owner.rotation), sin(owner.rotation))
-		owner.velocity += forward_input * FORWARD_THRUST * delta * direction
-		owner.velocity = owner.velocity.limit_length(MAX_FORWARD_THRUST)
+		var direction := Vector2(cos(entity.rotation), sin(entity.rotation))
+		entity.velocity += forward_input * FORWARD_THRUST * delta * direction
+		entity.velocity = entity.velocity.limit_length(MAX_FORWARD_THRUST)
 		trail.emitting = true
 		trail2.emitting = true
 	elif forward_input < 0:
-		owner.velocity = owner.velocity.move_toward(Vector2.ZERO, SLOW_THRUST * delta)
+		entity.velocity = entity.velocity.move_toward(Vector2.ZERO, SLOW_THRUST * delta)
 	else:
-		owner.velocity = owner.velocity.move_toward(Vector2.ZERO, FORWARD_THRUST_DECELERATION * delta)
+		entity.velocity = entity.velocity.move_toward(Vector2.ZERO, FORWARD_THRUST_DECELERATION * delta)
 	
-	owner.move_and_slide()
+	entity.move_and_slide()
 
 
 func process_rotation(delta: float) -> void:
@@ -62,4 +62,4 @@ func process_rotation(delta: float) -> void:
 		current_rotation_thrust = clampf(current_rotation_thrust, -MAX_ROTATION_THRUST, 
 			MAX_ROTATION_THRUST)
 	
-	owner.rotation += current_rotation_thrust * delta
+	entity.rotation += current_rotation_thrust * delta
