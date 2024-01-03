@@ -4,6 +4,8 @@ extends Node2D
 
 @export var enabled: bool = true
 
+@onready var entity: Entity = owner as Entity
+
 
 func _physics_process(delta: float) -> void:
 	if enabled:

@@ -15,16 +15,12 @@ func process_velocity(delta: float) -> void:
 	var horizontal_input: float = Input.get_axis("move_left", "move_right")
 	var vertical_input: float = Input.get_axis("move_up", "move_down")
 	
-	if abs(horizontal_input) > 0:
-		owner.velocity.x += horizontal_input * MOVE_FORCE * delta
-		owner.velocity.x = clamp(owner.velocity.x, -MAX_SPEED, MAX_SPEED)
-	else:
-		owner.velocity.x = move_toward(owner.velocity.x, 0.0, DECELERATION * delta)
+	if not horizontal_input and not vertical_input:
+		entity.velocity = entity.velocity.move_toward(Vector2.ZERO, DECELERATION * delta)
+		entity.move_and_slide()
+		return
 	
-	if abs(vertical_input) > 0:
-		owner.velocity.y += vertical_input * MOVE_FORCE * delta
-		owner.velocity.y = clamp(owner.velocity.y, -MAX_SPEED, MAX_SPEED)
-	else:
-		owner.velocity.y = move_toward(owner.velocity.y, 0.0, DECELERATION * delta)
-
-	owner.move_and_slide()
+	var input := Vector2(horizontal_input, vertical_input).normalized()
+	entity.velocity += input * MOVE_FORCE * delta
+	entity.velocity = entity.velocity.limit_length(MAX_SPEED)
+	entity.move_and_slide()

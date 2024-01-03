@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhw5ys165sf3g"]
+[gd_scene load_steps=8 format=3 uid="uid://dy3id0htrjjkm"]
 
 [ext_resource type="Script" path="res://data/entities/player_ship/player_ship.gd" id="1_dvebg"]
 [ext_resource type="PackedScene" uid="uid://cl6bwv730eyaq" path="res://data/entities/entity.tscn" id="1_xsypm"]

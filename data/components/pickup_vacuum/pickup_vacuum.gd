@@ -3,7 +3,7 @@ extends Component
 
 signal item_pickup(item: ItemData)
 
-const VACUUM_ACCELERATION: float = 200.0
+const VACUUM_ACCELERATION: float = 400.0
 const VACUUM_MAX_SPEED: float = 800.0
 
 var affected_pickups: Dictionary = {}  # Pickup : current vacuum speed

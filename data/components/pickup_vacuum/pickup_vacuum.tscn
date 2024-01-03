@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://data/components/pickup_vacuum/pickup_vacuum.gd" id="2_3hasd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3fp5d"]
-radius = 362.012
+radius = 439.028
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w4ai2"]
 radius = 14.1421
