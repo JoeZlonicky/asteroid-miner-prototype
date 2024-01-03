@@ -13,10 +13,12 @@ collision_layer = 9
 script = ExtResource("2_m1fo2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+position = Vector2(0.5, -76)
 texture = ExtResource("3_i2mf8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-position = Vector2(0, 76)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_lsuq2")
 
 [node name="Treads" parent="." index="2" instance=ExtResource("4_trs02")]
+position = Vector2(0.5, -76)
