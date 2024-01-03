@@ -1,15 +1,15 @@
 extends Component
 
 
-const FORWARD_THRUST: float = 320.0
-const FORWARD_THRUST_DECELERATION: float = 10.0
-const MAX_FORWARD_THRUST: float = 700.0
+@export var FORWARD_THRUST: float = 320.0
+@export var FORWARD_THRUST_DECELERATION: float = 10.0
+@export var MAX_FORWARD_THRUST: float = 700.0
 
-const SLOW_THRUST: float = 300.0
+@export var SLOW_THRUST: float = 300.0
 
-const ROTATION_THRUST: float = 2.0
-const ROTATION_THRUST_DECELERATION: float = 2.0
-const MAX_ROTATION_THRUST: float = 2.0
+@export var ROTATION_THRUST: float = 2.0
+@export var ROTATION_THRUST_DECELERATION: float = 2.0
+@export var MAX_ROTATION_THRUST: float = 2.0
 
 var current_rotation_thrust: float = 0.0
 
