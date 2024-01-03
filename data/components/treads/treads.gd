@@ -2,7 +2,7 @@ class_name Treads
 extends Component
 
 
-const MOVE_FORCE: float = 400.0
+const MOVE_FORCE: float = 500.0
 const MAX_SPEED: float = 500.0
 const DECELERATION: float = 1500.0
 

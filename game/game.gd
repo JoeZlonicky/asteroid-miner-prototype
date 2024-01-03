@@ -4,6 +4,7 @@ extends Node2D
 const MIN_WINDOW_SIZE = Vector2(800, 600)
 
 @onready var location: Location = $Space
+@onready var hud: SpaceHUD = $SpaceHUD
 
 
 func _ready() -> void:

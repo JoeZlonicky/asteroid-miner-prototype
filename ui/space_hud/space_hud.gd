@@ -1,3 +1,4 @@
+class_name SpaceHUD
 extends CanvasLayer
 
 const SPEED_UNIT = "m/s"
@@ -5,6 +6,7 @@ const SPEED_UNIT = "m/s"
 @export var player_ship: Player
 
 @onready var speed_label: Label = $SpeedLabel
+@onready var item_pickup_notification_container: ItemPickupNoficationContainer = %ItemPickupNotificationContainer
 
 
 func _physics_process(_delta: float) -> void:

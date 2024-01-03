@@ -9,5 +9,4 @@ script = ExtResource("1_rx8ei")
 
 [node name="Space" parent="." instance=ExtResource("4_wysg4")]
 
-[node name="SpaceHUD" parent="." node_paths=PackedStringArray("player_ship") instance=ExtResource("4_rxg3j")]
-player_ship = NodePath("")
+[node name="SpaceHUD" parent="." instance=ExtResource("4_rxg3j")]

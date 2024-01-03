@@ -31,4 +31,5 @@ visible = false
 position = Vector2(0, 4)
 polygon = PackedVector2Array(102, 16, 101, -23, -18, -114, -80, -114, -79, -6, -81, 106, -16, 104)
 
+[connection signal="item_added" from="Inventory" to="." method="_on_inventory_item_added"]
 [connection signal="item_pickup" from="PickupVacuum" to="." method="_on_pickup_vacuum_item_pickup"]
