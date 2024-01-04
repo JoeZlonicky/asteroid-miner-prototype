@@ -6,11 +6,11 @@
 [node name="Blasters" instance=ExtResource("1_sxfdo")]
 script = ExtResource("2_2rlo4")
 
-[node name="Point1" type="Marker2D" parent="." index="0"]
-position = Vector2(0, -54)
+[node name="LeftPoint" type="Marker2D" parent="." index="0"]
+position = Vector2(-54, 0)
 
-[node name="Point2" type="Marker2D" parent="." index="1"]
-position = Vector2(0, 54)
+[node name="RightPoint" type="Marker2D" parent="." index="1"]
+position = Vector2(54, 0)
 
 [node name="Cooldown" type="Timer" parent="." index="2"]
 wait_time = 0.25

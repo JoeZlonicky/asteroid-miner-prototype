@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://da6nuxjpj47d5" path="res://data/components/treads/treads.tscn" id="4_fl52m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1anhb"]
-radius = 83.5958
+radius = 90.0056
 
 [node name="PlayerRobot" instance=ExtResource("1_ufagj")]
 collision_layer = 9
@@ -16,7 +16,6 @@ script = ExtResource("2_m1fo2")
 texture = ExtResource("3_n2f1m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-position = Vector2(-1.5, -2)
 shape = SubResource("CircleShape2D_1anhb")
 
 [node name="Treads" parent="." index="2" instance=ExtResource("4_fl52m")]

@@ -13,17 +13,16 @@ collision_layer = 9
 script = ExtResource("1_dvebg")
 
 [node name="Blasters" parent="." index="0" instance=ExtResource("2_avet5")]
-position = Vector2(92, 0)
+position = Vector2(0, -92)
 
 [node name="Thrusters" parent="." index="1" instance=ExtResource("3_6yd2e")]
-position = Vector2(-130, 1)
+position = Vector2(0, 120)
 
 [node name="Inventory" parent="." index="2" instance=ExtResource("4_lans1")]
 
 [node name="PickupVacuum" parent="." index="3" instance=ExtResource("5_ntd4j")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="4"]
-rotation = 1.5708
 texture = ExtResource("2_p65gm")
 
 [node name="CollisionPolygon" type="CollisionPolygon2D" parent="." index="5"]

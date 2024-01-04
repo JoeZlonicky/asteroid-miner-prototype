@@ -2,8 +2,7 @@ class_name Treads
 extends Component
 
 
-const DECELERATION: float = 2000.0
-const MAX_SPEED: float = 650.0
+const MOVE_SPEED: float = 650.0
 const ROTATION_SPEED: float = 10.0
 
 var last_input_direction: Vector2 = Vector2.ZERO
@@ -18,20 +17,20 @@ func active_update(delta: float) -> void:
 	process_rotation(input, delta)
 
 
-func process_velocity(input_vector: Vector2, delta: float):
+func process_velocity(input_vector: Vector2, _delta: float) -> void:
 	if input_vector:
-		entity.velocity = input_vector.normalized() * MAX_SPEED
+		entity.velocity = input_vector.normalized() * MOVE_SPEED
 	else:
-		entity.velocity = entity.velocity.move_toward(Vector2.ZERO, DECELERATION)
+		entity.velocity = Vector2.ZERO
 	entity.move_and_slide()
 
 
-func process_rotation(input_vector: Vector2, delta: float):
+func process_rotation(input_vector: Vector2, delta: float) -> void:
 	if input_vector:
 		last_input_direction = input_vector.normalized()
 	
 	if not last_input_direction:
 		return
 	
-	entity.rotation = rotate_toward(entity.rotation, last_input_direction.angle(),
+	entity.rotation = rotate_toward(entity.rotation, last_input_direction.angle() + PI / 2.0,
 		ROTATION_SPEED * delta)
