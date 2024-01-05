@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bnryjyjuyc6jk"]
 
-[ext_resource type="Script" path="res://ui/space_hud/item_pickup_notification/item_pickup_notification_container.gd" id="1_bph3q"]
+[ext_resource type="Script" path="res://ui/general_hud/item_pickup_notification/item_pickup_notification_container.gd" id="1_bph3q"]
 
 [node name="ItemPickupNotificationContainer" type="VBoxContainer"]
 clip_contents = true

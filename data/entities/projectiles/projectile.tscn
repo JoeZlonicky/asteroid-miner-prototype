@@ -93,7 +93,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0ex4"]
-size = Vector2(132, 17)
+size = Vector2(33, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0r6el"]
 size = Vector2(17, 17)
@@ -136,11 +136,11 @@ texture = ExtResource("5_s3jse")
 collision_layer = 0
 
 [node name="CollisionShape" type="CollisionShape2D" parent="HitArea" index="0"]
-position = Vector2(59, 0.5)
+position = Vector2(109, 0)
 shape = SubResource("RectangleShape2D_p0ex4")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="." index="3"]
-position = Vector2(116.5, 0.5)
+position = Vector2(116.5, 0)
 shape = SubResource("RectangleShape2D_0r6el")
 
 [node name="Lifespan" type="Timer" parent="." index="4"]

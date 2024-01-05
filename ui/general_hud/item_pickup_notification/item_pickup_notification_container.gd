@@ -2,7 +2,7 @@ class_name ItemPickupNoficationContainer
 extends VBoxContainer
 
 
-const PICKUP_NOTIFICATION_SCENE: PackedScene = preload("res://ui/space_hud/item_pickup_notification/item_pickup_notification.tscn")
+const PICKUP_NOTIFICATION_SCENE: PackedScene = preload("uid://b3q5b7hm5t5t4")
 
 var notifications: Dictionary = {}  # ItemData : notification
 

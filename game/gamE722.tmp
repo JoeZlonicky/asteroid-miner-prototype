@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://fwlb35x2ys72"]
+
+[ext_resource type="Script" path="res://game/game.gd" id="1_rx8ei"]
+[ext_resource type="PackedScene" uid="uid://cii8xrotmv763" path="res://ui/ship_hud/ship_hud.tscn" id="4_rxg3j"]
+[ext_resource type="PackedScene" uid="uid://bgiop2yu368ym" path="res://data/locations/space/space.tscn" id="4_wysg4"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_rx8ei")
+
+[node name="Space" parent="." instance=ExtResource("4_wysg4")]
+
+[node name="ShipHUD" parent="." instance=ExtResource("4_rxg3j")]
+
+[node name="RobotHUD" type="CanvasLayer" parent="."]

@@ -25,4 +25,4 @@ func active_update(_delta: float) -> void:
 func spawn_projectile(spawn_position: Vector2) -> void:
 	var projectile: Projectile = PROJECTILE_SCENE.instantiate()
 	entity.get_parent().add_child(projectile)
-	projectile.fire(spawn_position, global_rotation, entity.velocity.length())
+	projectile.fire(spawn_position, global_rotation - PI / 2.0, entity.velocity.length())

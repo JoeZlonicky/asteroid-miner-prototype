@@ -13,7 +13,7 @@ collision_layer = 9
 script = ExtResource("1_dvebg")
 
 [node name="Blasters" parent="." index="0" instance=ExtResource("2_avet5")]
-position = Vector2(0, -92)
+position = Vector2(0, -118)
 
 [node name="Thrusters" parent="." index="1" instance=ExtResource("3_6yd2e")]
 position = Vector2(0, 120)
