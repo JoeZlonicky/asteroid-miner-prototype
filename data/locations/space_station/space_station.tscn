@@ -1,19 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://cssu3grsdpbqj"]
+[gd_scene load_steps=8 format=3 uid="uid://cssu3grsdpbqj"]
 
 [ext_resource type="PackedScene" uid="uid://bemjvirh1dri8" path="res://data/locations/location.tscn" id="1_ap2yn"]
 [ext_resource type="Script" path="res://data/locations/space_station/space_station.gd" id="2_0r7of"]
 [ext_resource type="PackedScene" uid="uid://cnt2gonn60ik2" path="res://data/entities/docked_player_ship/docked_player_ship.tscn" id="2_6k0w3"]
 [ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://data/locations/space/background/space_background.tscn" id="3_vgtnc"]
-[ext_resource type="Texture2D" uid="uid://ci8l2xgdut21q" path="res://assets/art/crate/crate.svg" id="5_pecpv"]
+[ext_resource type="PackedScene" uid="uid://cfb14fsu1v5v5" path="res://data/entities/crate/crate.tscn" id="5_bakk4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8vphr"]
 size = Vector2(3839, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1nbw"]
 size = Vector2(53, 2157)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifu63"]
-size = Vector2(199, 200)
 
 [node name="SpaceStation" instance=ExtResource("1_ap2yn")]
 script = ExtResource("2_0r7of")
@@ -92,64 +89,22 @@ position = Vector2(1911, 505)
 position = Vector2(2772, 635)
 spawn_type = 1
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="9"]
-position = Vector2(361, 790)
+[node name="Crate" parent="." index="9" instance=ExtResource("5_bakk4")]
+position = Vector2(378, 684)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" index="0"]
-texture = ExtResource("5_pecpv")
+[node name="Crate2" parent="." index="10" instance=ExtResource("5_bakk4")]
+position = Vector2(414, 1646)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="1"]
-position = Vector2(-1.5, 0)
-shape = SubResource("RectangleShape2D_ifu63")
+[node name="Crate3" parent="." index="11" instance=ExtResource("5_bakk4")]
+position = Vector2(1312, 1838)
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." index="10"]
-position = Vector2(343, 1539)
+[node name="Crate4" parent="." index="12" instance=ExtResource("5_bakk4")]
+position = Vector2(2438, 1852)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" index="0"]
-texture = ExtResource("5_pecpv")
+[node name="Crate5" parent="." index="13" instance=ExtResource("5_bakk4")]
+position = Vector2(3507, 1524)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" index="1"]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_ifu63")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="." index="11"]
-position = Vector2(1276, 1861)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" index="0"]
-texture = ExtResource("5_pecpv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" index="1"]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_ifu63")
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="." index="12"]
-position = Vector2(2334, 1889)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" index="0"]
-texture = ExtResource("5_pecpv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" index="1"]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_ifu63")
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="." index="13"]
-position = Vector2(3516, 1487)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5" index="0"]
-texture = ExtResource("5_pecpv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" index="1"]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_ifu63")
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="." index="14"]
-position = Vector2(3505, 650)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6" index="0"]
-texture = ExtResource("5_pecpv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" index="1"]
-position = Vector2(-1.5, 1)
-shape = SubResource("RectangleShape2D_ifu63")
+[node name="Crate6" parent="." index="14" instance=ExtResource("5_bakk4")]
+position = Vector2(3478, 761)
 
 [connection signal="interacted_with" from="DockedPlayerShip" to="." method="_on_docked_player_ship_interacted_with"]
