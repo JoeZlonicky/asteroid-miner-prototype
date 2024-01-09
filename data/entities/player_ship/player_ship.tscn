@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cplndshccq2rs"]
+[gd_scene load_steps=9 format=3 uid="uid://cplndshccq2rs"]
 
 [ext_resource type="Script" path="res://data/entities/player_ship/player_ship.gd" id="1_dvebg"]
 [ext_resource type="PackedScene" uid="uid://cl6bwv730eyaq" path="res://data/entities/entity.tscn" id="1_xsypm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://data/components/thrusters/thrusters.tscn" id="3_6yd2e"]
 [ext_resource type="PackedScene" uid="uid://dnaqqxwvavivp" path="res://data/components/inventory/inventory.tscn" id="4_lans1"]
 [ext_resource type="PackedScene" uid="uid://b3sleru8ecrea" path="res://data/components/pickup_vacuum/pickup_vacuum.tscn" id="5_ntd4j"]
+[ext_resource type="PackedScene" uid="uid://b31ln3jkmbjjd" path="res://data/components/vehicle/vehicle_component.tscn" id="8_cegip"]
 
 [node name="PlayerShip" instance=ExtResource("1_xsypm")]
 collision_layer = 9
@@ -22,10 +23,12 @@ position = Vector2(0, 120)
 
 [node name="PickupVacuum" parent="." index="3" instance=ExtResource("5_ntd4j")]
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="4"]
+[node name="VehicleComponent" parent="." index="4" instance=ExtResource("8_cegip")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="5"]
 texture = ExtResource("2_p65gm")
 
-[node name="CollisionPolygon" type="CollisionPolygon2D" parent="." index="5"]
+[node name="CollisionPolygon" type="CollisionPolygon2D" parent="." index="6"]
 visible = false
 position = Vector2(0, 4)
 polygon = PackedVector2Array(102, 16, 101, -23, -18, -114, -80, -114, -79, -6, -81, 106, -16, 104)

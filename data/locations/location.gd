@@ -5,29 +5,25 @@ extends Node2D
 signal player_spawned(player: Entity)
 
 const PLAYER_SHIP_SCENE: PackedScene = preload("res://data/entities/player_ship/player_ship.tscn")
-const PLAYER_ROBOT_SCENE: PackedScene = preload("res://data/entities/player_robot/player_robot.tscn")
+const PLAYER_SCENE: PackedScene = preload("res://data/entities/player/player.tscn")
 
 @onready var camera: Camera2D = $Camera2D
 @onready var default_player_spawn_marker: PlayerSpawnMarker = $DefaultPlayerSpawnMarker
 
 
-func _ready() -> void:
-	spawn_player()
-
-
-func spawn_player() -> void:
-	var player: Entity = null
+func spawn_player(player: Player = null) -> void:
+	if not player:
+		player = PLAYER_SCENE.instantiate()
 	
 	if default_player_spawn_marker.spawn_type == PlayerSpawnMarker.SPAWN_TYPE.SHIP:
-		player = PLAYER_SHIP_SCENE.instantiate()
+		var player_ship = PLAYER_SHIP_SCENE.instantiate()
+		player_ship.global_position = default_player_spawn_marker.global_position
+		add_child(player_ship)
+		player_ship.add_child(player)
+		player_ship.vehicle_component.set_driver(player)
 	else:
-		player = PLAYER_ROBOT_SCENE.instantiate()
+		add_child(player)
+		player.global_position = default_player_spawn_marker.global_position
 	
-	add_child(player)
-	player.global_position = default_player_spawn_marker.global_position
-	
-	var remote_transform: RemoteTransform2D = RemoteTransform2D.new()
-	player.add_child(remote_transform)
-	remote_transform.remote_path = camera.get_path()
-	
+	player.remote_transform.remote_path = camera.get_path()
 	player_spawned.emit(player)

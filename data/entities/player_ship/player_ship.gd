@@ -3,10 +3,12 @@ extends Entity
 
 
 @onready var inventory: Inventory = $Inventory
+@onready var vehicle_component: VehicleComponent = $VehicleComponent
 
 
 func _on_pickup_vacuum_item_pickup(item: ItemData) -> void:
-	inventory.add_item(item)
+	var player: Player = vehicle_component.driver as Player
+	player.inventory.add_item(item)
 
 
 func _on_inventory_item_added(item_data: ItemData, n: int) -> void:

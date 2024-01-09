@@ -5,7 +5,7 @@ const MIN_WINDOW_SIZE = Vector2(800, 600)
 
 @export var test_location: LocationData
 
-var player: Entity = null
+var player: Player = null
 
 @onready var location: Location = null
 
@@ -23,6 +23,8 @@ func _ready() -> void:
 func change_location(to: LocationData) -> void:
 	var new_location: Location = to.scene.instantiate()
 	if location:
+		if player:
+			player.get_parent().remove_child(player)
 		location.queue_free()
 	location = new_location
 	location.player_spawned.connect(_on_player_spawned)
@@ -30,15 +32,9 @@ func change_location(to: LocationData) -> void:
 	add_child(new_location)
 	move_child(new_location, 0)
 	
+	location.spawn_player(player)
 
 
-func _on_player_spawned(spawned_player: Entity) -> void:
+func _on_player_spawned(spawned_player: Player) -> void:
 	player = spawned_player
 	
-	if player is PlayerShip:
-		ship_hud.player_ship = player
-		robot_hud.hide()
-		ship_hud.show()
-	else:
-		ship_hud.hide()
-		robot_hud.show()
