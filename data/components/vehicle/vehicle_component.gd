@@ -5,7 +5,7 @@ extends Component
 var driver: Entity = null
 
 
-func set_driver(new_driver: Entity):
+func set_driver(new_driver: Entity) -> void:
 	driver = new_driver
 	driver.process_mode = Node.PROCESS_MODE_DISABLED
 	driver.visible = false
@@ -17,7 +17,7 @@ func set_driver(new_driver: Entity):
 	game.vehicle_hud.set_vehicle(entity)
 
 
-func _on_driver_tree_exited():
+func _on_driver_tree_exited() -> void:
 	driver.process_mode = Node.PROCESS_MODE_INHERIT
 	driver.visible = true
 	driver.collision_shape.disabled = false

@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://b43vj03bxa5lh"]
 
-[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://data/components/component.tscn" id="1_fpyuk"]
-[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://assets/fonts/chakra_petch_regular.ttf" id="2_3o0tj"]
-[ext_resource type="Script" path="res://data/components/interact_area/interact_area.gd" id="2_k4b5p"]
+[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://data/components/component.tscn" id="1_0hkvv"]
+[ext_resource type="Script" path="res://data/components/interactable/interactable_component.gd" id="2_hrncq"]
+[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://assets/fonts/chakra_petch_regular.ttf" id="3_gvewi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vsdt"]
 radius = 191.212
 
-[node name="InteractArea" instance=ExtResource("1_fpyuk")]
-script = ExtResource("2_k4b5p")
+[node name="InteractableComponent" instance=ExtResource("1_0hkvv")]
+script = ExtResource("2_hrncq")
 
 [node name="TriggerArea" type="Area2D" parent="." index="0"]
 collision_mask = 8
@@ -25,7 +25,7 @@ offset_top = -101.0
 offset_right = 30.0
 offset_bottom = -59.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_3o0tj")
+theme_override_fonts/font = ExtResource("3_gvewi")
 theme_override_font_sizes/font_size = 64
 text = "E"
 

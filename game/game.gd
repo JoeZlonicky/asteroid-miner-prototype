@@ -11,7 +11,6 @@ var player: Player = null
 
 @onready var general_hud: GeneralHUD = $GeneralHUD
 @onready var vehicle_hud: VehicleHUD = $VehicleHUD
-@onready var robot_hud: CanvasLayer = $RobotHUD
 
 
 func _ready() -> void:

@@ -2,7 +2,7 @@ class_name PlayerShip
 extends Entity
 
 
-@onready var inventory: Inventory = $Inventory
+@onready var inventory: InventoryComponent = $Inventory
 @onready var vehicle_component: VehicleComponent = $VehicleComponent
 
 

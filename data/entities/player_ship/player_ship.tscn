@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://data/components/blasters/blasters.tscn" id="2_avet5"]
 [ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/art/player_ship/player_ship.svg" id="2_p65gm"]
 [ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://data/components/thrusters/thrusters.tscn" id="3_6yd2e"]
-[ext_resource type="PackedScene" uid="uid://dnaqqxwvavivp" path="res://data/components/inventory/inventory.tscn" id="4_lans1"]
-[ext_resource type="PackedScene" uid="uid://b3sleru8ecrea" path="res://data/components/pickup_vacuum/pickup_vacuum.tscn" id="5_ntd4j"]
+[ext_resource type="PackedScene" uid="uid://dnaqqxwvavivp" path="res://data/components/inventory/inventory_component.tscn" id="4_lans1"]
+[ext_resource type="PackedScene" uid="uid://b3sleru8ecrea" path="res://data/components/vacuum/vacuum_component.tscn" id="5_ntd4j"]
 [ext_resource type="PackedScene" uid="uid://b31ln3jkmbjjd" path="res://data/components/vehicle/vehicle_component.tscn" id="8_cegip"]
 
 [node name="PlayerShip" instance=ExtResource("1_xsypm")]

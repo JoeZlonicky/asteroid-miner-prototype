@@ -2,7 +2,7 @@ class_name InventoryPanel
 extends NinePatchRect
 
 
-var inventory: Inventory = null
+var inventory: InventoryComponent = null
 
 @onready var grid_container: GridContainer = %GridContainer
 
@@ -11,7 +11,7 @@ func _on_visibility_changed() -> void:
 		return
 	
 	var i: int = 0
-	for item in inventory.items:
+	for item: ItemData in inventory.items:
 		var slot: InventorySlot = grid_container.get_child(i)
 		slot.item_sprite.texture = item.sprite
 		slot.count_label.text = str(inventory.items[item])

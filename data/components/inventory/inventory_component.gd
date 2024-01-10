@@ -1,4 +1,4 @@
-class_name Inventory
+class_name InventoryComponent
 extends Component
 
 

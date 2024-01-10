@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://data/entities/player/player.gd" id="2_ocis5"]
 [ext_resource type="Texture2D" uid="uid://dev7mkkgob585" path="res://assets/art/player_robot/player_robot.svg" id="3_owsw1"]
 [ext_resource type="PackedScene" uid="uid://da6nuxjpj47d5" path="res://data/components/treads/treads.tscn" id="4_266d1"]
-[ext_resource type="PackedScene" uid="uid://dnaqqxwvavivp" path="res://data/components/inventory/inventory.tscn" id="5_obvel"]
+[ext_resource type="PackedScene" uid="uid://dnaqqxwvavivp" path="res://data/components/inventory/inventory_component.tscn" id="5_obvel"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1anhb"]
 radius = 90.0056

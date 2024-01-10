@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cl6bwv730eyaq" path="res://data/entities/entity.tscn" id="1_vy31u"]
 [ext_resource type="Texture2D" uid="uid://l5bvxg4o17xe" path="res://assets/art/player_ship/player_ship_docked.svg" id="2_ahgkh"]
 [ext_resource type="Script" path="res://data/entities/docked_player_ship/docked_player_ship.gd" id="2_ontt7"]
-[ext_resource type="PackedScene" uid="uid://b43vj03bxa5lh" path="res://data/components/interact_area/interact_area.tscn" id="3_x47t1"]
+[ext_resource type="PackedScene" uid="uid://b43vj03bxa5lh" path="res://data/components/interactable/interactable_component.tscn" id="3_x47t1"]
 
 [node name="DockedPlayerShip" instance=ExtResource("1_vy31u")]
 script = ExtResource("2_ontt7")

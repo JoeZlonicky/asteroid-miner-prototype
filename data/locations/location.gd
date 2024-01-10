@@ -16,7 +16,7 @@ func spawn_player(player: Player = null) -> void:
 		player = PLAYER_SCENE.instantiate()
 	
 	if default_player_spawn_marker.spawn_type == PlayerSpawnMarker.SPAWN_TYPE.SHIP:
-		var player_ship = PLAYER_SHIP_SCENE.instantiate()
+		var player_ship: Entity = PLAYER_SHIP_SCENE.instantiate()
 		player_ship.global_position = default_player_spawn_marker.global_position
 		add_child(player_ship)
 		player_ship.add_child(player)
