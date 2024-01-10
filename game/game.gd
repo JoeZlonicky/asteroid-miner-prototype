@@ -10,7 +10,7 @@ var player: Player = null
 @onready var location: Location = null
 
 @onready var general_hud: GeneralHUD = $GeneralHUD
-@onready var ship_hud: ShipHUD = $ShipHUD
+@onready var vehicle_hud: VehicleHUD = $VehicleHUD
 @onready var robot_hud: CanvasLayer = $RobotHUD
 
 

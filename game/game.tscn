@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://game/game.gd" id="1_rx8ei"]
 [ext_resource type="Resource" uid="uid://chp2av2ap8ukj" path="res://data/locations/space_station/space_station.tres" id="2_0cm1f"]
 [ext_resource type="PackedScene" uid="uid://bqwjbla6phgxm" path="res://ui/general_hud/general_hud.tscn" id="3_slg0l"]
-[ext_resource type="PackedScene" uid="uid://cii8xrotmv763" path="res://ui/ship_hud/ship_hud.tscn" id="4_rxg3j"]
+[ext_resource type="PackedScene" uid="uid://cii8xrotmv763" path="res://ui/vehicle_hud/vehicle_hud.tscn" id="4_rxg3j"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_rx8ei")
@@ -11,6 +11,4 @@ test_location = ExtResource("2_0cm1f")
 
 [node name="GeneralHUD" parent="." instance=ExtResource("3_slg0l")]
 
-[node name="ShipHUD" parent="." instance=ExtResource("4_rxg3j")]
-
-[node name="RobotHUD" type="CanvasLayer" parent="."]
+[node name="VehicleHUD" parent="." instance=ExtResource("4_rxg3j")]
