@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cl6bwv730eyaq" path="res://data/entities/entity.tscn" id="1_moobc"]
 [ext_resource type="Script" path="res://data/entities/space_station/space_station.gd" id="2_m6yow"]
-[ext_resource type="Texture2D" uid="uid://c764rtjdqsc0r" path="res://assets/art/space_station/space_station.svg" id="2_xp3r1"]
+[ext_resource type="Texture2D" uid="uid://c764rtjdqsc0r" path="res://assets/art/entities/space_station/space_station.svg" id="2_xp3r1"]
 [ext_resource type="PackedScene" uid="uid://b43vj03bxa5lh" path="res://data/components/interactable/interactable_component.tscn" id="3_vhmlw"]
 
 [node name="SpaceStation" instance=ExtResource("1_moobc")]

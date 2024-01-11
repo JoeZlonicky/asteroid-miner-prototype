@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://data/entities/asteroid/asteroid.gd" id="1_but43"]
 [ext_resource type="PackedScene" uid="uid://cl6bwv730eyaq" path="res://data/entities/entity.tscn" id="1_c6dwn"]
 [ext_resource type="Shader" path="res://assets/shaders/flash.gdshader" id="2_lblnn"]
-[ext_resource type="Texture2D" uid="uid://p6vmxt5j72er" path="res://assets/art/asteroid/asteroid.svg" id="3_gckv0"]
+[ext_resource type="Texture2D" uid="uid://p6vmxt5j72er" path="res://assets/art/entities/asteroid/asteroid.svg" id="3_gckv0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_osif2"]
 shader = ExtResource("2_lblnn")

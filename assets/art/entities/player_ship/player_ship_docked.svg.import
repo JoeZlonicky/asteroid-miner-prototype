@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci8l2xgdut21q"
-path="res://.godot/imported/crate.svg-416f30026b44e9e24db21c6accb39c3f.ctex"
+uid="uid://l5bvxg4o17xe"
+path="res://.godot/imported/player_ship_docked.svg-39c7490f2edcd46df5c56a430a2af190.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/crate/crate.svg"
-dest_files=["res://.godot/imported/crate.svg-416f30026b44e9e24db21c6accb39c3f.ctex"]
+source_file="res://assets/art/entities/player_ship/player_ship_docked.svg"
+dest_files=["res://.godot/imported/player_ship_docked.svg-39c7490f2edcd46df5c56a430a2af190.ctex"]
 
 [params]
 

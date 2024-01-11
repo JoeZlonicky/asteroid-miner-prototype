@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l5bvxg4o17xe"
-path="res://.godot/imported/player_ship_docked.svg-2ff375a00a1d07242707189b9fc98f22.ctex"
+uid="uid://b20drp06672nl"
+path="res://.godot/imported/ore.svg-7027b51ce30741b33313666a01d56306.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/player_ship/player_ship_docked.svg"
-dest_files=["res://.godot/imported/player_ship_docked.svg-2ff375a00a1d07242707189b9fc98f22.ctex"]
+source_file="res://assets/art/entities/ore/ore.svg"
+dest_files=["res://.godot/imported/ore.svg-7027b51ce30741b33313666a01d56306.ctex"]
 
 [params]
 

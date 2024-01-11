@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpl0ul6oo7q11"
-path="res://.godot/imported/laser_glow.png-77ca4798b96f8d99b468c561a1eefc63.ctex"
+uid="uid://ci8l2xgdut21q"
+path="res://.godot/imported/crate.svg-d9804d6e336426f0d5f9efd25d3ce7c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/laser/laser_glow.png"
-dest_files=["res://.godot/imported/laser_glow.png-77ca4798b96f8d99b468c561a1eefc63.ctex"]
+source_file="res://assets/art/entities/crate/crate.svg"
+dest_files=["res://.godot/imported/crate.svg-d9804d6e336426f0d5f9efd25d3ce7c4.ctex"]
 
 [params]
 
@@ -31,4 +31,7 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

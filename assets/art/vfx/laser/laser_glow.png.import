@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsivagbf4f1jm"
-path="res://.godot/imported/player_ship.svg-10558d5c20b8c845cead0b94d9b85483.ctex"
+uid="uid://bpl0ul6oo7q11"
+path="res://.godot/imported/laser_glow.png-3c7327005aa7493c20bb7bf4cf0fcbe7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/player_ship/player_ship.svg"
-dest_files=["res://.godot/imported/player_ship.svg-10558d5c20b8c845cead0b94d9b85483.ctex"]
+source_file="res://assets/art/vfx/laser/laser_glow.png"
+dest_files=["res://.godot/imported/laser_glow.png-3c7327005aa7493c20bb7bf4cf0fcbe7.ctex"]
 
 [params]
 
@@ -31,7 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
+detect_3d/compress_to=1

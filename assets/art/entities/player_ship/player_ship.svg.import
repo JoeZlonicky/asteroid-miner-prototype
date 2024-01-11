@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dev7mkkgob585"
-path="res://.godot/imported/player_robot.svg-33bc42bb8c2250284618b64e5c145fcf.ctex"
+uid="uid://bsivagbf4f1jm"
+path="res://.godot/imported/player_ship.svg-0e7e464217b291483f34f709ee3aa4c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/player_robot/player_robot.svg"
-dest_files=["res://.godot/imported/player_robot.svg-33bc42bb8c2250284618b64e5c145fcf.ctex"]
+source_file="res://assets/art/entities/player_ship/player_ship.svg"
+dest_files=["res://.godot/imported/player_ship.svg-0e7e464217b291483f34f709ee3aa4c0.ctex"]
 
 [params]
 

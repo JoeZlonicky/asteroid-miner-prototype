@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://data/entities/player_ship/player_ship.gd" id="1_dvebg"]
 [ext_resource type="PackedScene" uid="uid://cl6bwv730eyaq" path="res://data/entities/entity.tscn" id="1_xsypm"]
 [ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://data/components/blasters/blasters.tscn" id="2_avet5"]
-[ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/art/player_ship/player_ship.svg" id="2_p65gm"]
+[ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/art/entities/player_ship/player_ship.svg" id="2_p65gm"]
 [ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://data/components/thrusters/thrusters.tscn" id="3_6yd2e"]
 [ext_resource type="PackedScene" uid="uid://dnaqqxwvavivp" path="res://data/components/inventory/inventory_component.tscn" id="4_lans1"]
 [ext_resource type="PackedScene" uid="uid://b3sleru8ecrea" path="res://data/components/vacuum/vacuum_component.tscn" id="5_ntd4j"]

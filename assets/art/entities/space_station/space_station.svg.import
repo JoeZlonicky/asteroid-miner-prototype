@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b20drp06672nl"
-path="res://.godot/imported/ore.svg-46daffc44dcdc3f85a43cd9902453035.ctex"
+uid="uid://c764rtjdqsc0r"
+path="res://.godot/imported/space_station.svg-8750392b0142b5f61450b3bf059cf019.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/ore/ore.svg"
-dest_files=["res://.godot/imported/ore.svg-46daffc44dcdc3f85a43cd9902453035.ctex"]
+source_file="res://assets/art/entities/space_station/space_station.svg"
+dest_files=["res://.godot/imported/space_station.svg-8750392b0142b5f61450b3bf059cf019.ctex"]
 
 [params]
 
