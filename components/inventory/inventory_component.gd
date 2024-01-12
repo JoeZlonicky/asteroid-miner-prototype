@@ -4,6 +4,7 @@ extends Node
 
 signal item_added(item_data: ItemData, n: int)
 
+
 var items: Dictionary = {}
 
 

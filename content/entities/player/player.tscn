@@ -23,3 +23,5 @@ shape = SubResource("CircleShape2D_1anhb")
 [node name="Inventory" parent="." instance=ExtResource("5_obvel")]
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+
+[connection signal="item_added" from="Inventory" to="." method="_on_inventory_item_added"]
