@@ -8,20 +8,16 @@ radius = 439.028
 [sub_resource type="CircleShape2D" id="CircleShape2D_w4ai2"]
 radius = 14.1421
 
-[node name="VacuumComponent" type="Node2D"]
+[node name="VacuumArea" type="Area2D"]
 script = ExtResource("2_vm42c")
 
-[node name="VacuumArea" type="Area2D" parent="."]
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VacuumArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_3fp5d")
 
 [node name="CenterArea" type="Area2D" parent="."]
-collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CenterArea"]
 shape = SubResource("CircleShape2D_w4ai2")
 
-[connection signal="body_entered" from="VacuumArea" to="." method="_on_vacuum_area_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="CenterArea" to="." method="_on_center_area_body_entered"]

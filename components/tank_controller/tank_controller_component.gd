@@ -7,8 +7,6 @@ signal left_input_received
 signal right_input_received
 signal slow_input_received
 
-@export var character: CharacterBody2D = null
-
 @export var FORWARD_THRUST: float = 320.0
 @export var FORWARD_THRUST_DECELERATION: float = 10.0
 @export var MAX_FORWARD_THRUST: float = 700.0
@@ -20,6 +18,8 @@ signal slow_input_received
 @export var MAX_ROTATION_THRUST: float = 2.0
 
 var current_rotation_thrust: float = 0.0
+
+@onready var character: CharacterBody2D = owner
 
 
 func _physics_process(delta: float) -> void:

@@ -18,8 +18,7 @@ texture = ExtResource("3_owsw1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1anhb")
 
-[node name="Treads" parent="." node_paths=PackedStringArray("character") instance=ExtResource("4_266d1")]
-character = NodePath("..")
+[node name="Treads" parent="." instance=ExtResource("4_266d1")]
 
 [node name="Inventory" parent="." instance=ExtResource("5_obvel")]
 

@@ -15,13 +15,13 @@ script = ExtResource("1_dvebg")
 [node name="Blasters" parent="." instance=ExtResource("2_avet5")]
 position = Vector2(0, -118)
 
-[node name="Thrusters" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_6yd2e")]
+[node name="Thrusters" parent="." instance=ExtResource("3_6yd2e")]
 position = Vector2(0, 120)
-character = NodePath("..")
 
 [node name="Inventory" parent="." instance=ExtResource("4_lans1")]
 
 [node name="PickupVacuum" parent="." instance=ExtResource("5_ntd4j")]
+collision_mask = 4
 
 [node name="VehicleComponent" parent="." node_paths=PackedStringArray("entity") instance=ExtResource("8_cegip")]
 entity = NodePath("..")
@@ -35,4 +35,4 @@ position = Vector2(0, 4)
 polygon = PackedVector2Array(102, 16, 101, -23, -18, -114, -80, -114, -79, -6, -81, 106, -16, 104)
 
 [connection signal="item_added" from="Inventory" to="." method="_on_inventory_item_added"]
-[connection signal="item_pickup" from="PickupVacuum" to="." method="_on_pickup_vacuum_item_pickup"]
+[connection signal="node_reached_center" from="PickupVacuum" to="." method="_on_pickup_vacuum_node_reached_center"]
