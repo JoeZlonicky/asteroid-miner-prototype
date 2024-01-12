@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cruwcxm1lvu8k"]
+[gd_scene load_steps=8 format=3 uid="uid://lbf65e7cdsio"]
 
 [ext_resource type="Script" path="res://content/entities/player_ship/player_ship.gd" id="1_dvebg"]
 [ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://content/weapons/blasters/blasters.tscn" id="2_avet5"]
 [ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/art/entities/player_ship/player_ship.svg" id="2_p65gm"]
 [ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://components/tank_controller/tank_controller_component.tscn" id="3_6yd2e"]
+[ext_resource type="PackedScene" uid="uid://dy3hoscn5tnmm" path="res://content/entities/player_ship/trail/trail.tscn" id="4_tuojp"]
 [ext_resource type="PackedScene" uid="uid://b3sleru8ecrea" path="res://components/vacuum/vacuum_component.tscn" id="5_ntd4j"]
 [ext_resource type="PackedScene" uid="uid://b31ln3jkmbjjd" path="res://components/vehicle/vehicle_component.tscn" id="8_cegip"]
 
@@ -16,6 +17,12 @@ position = Vector2(0, -118)
 
 [node name="Thrusters" parent="." instance=ExtResource("3_6yd2e")]
 position = Vector2(0, 120)
+
+[node name="LeftTrail" parent="Thrusters" instance=ExtResource("4_tuojp")]
+position = Vector2(-40, -3)
+
+[node name="RightTrail" parent="Thrusters" instance=ExtResource("4_tuojp")]
+position = Vector2(40, -3)
 
 [node name="PickupVacuum" parent="." instance=ExtResource("5_ntd4j")]
 collision_mask = 4
@@ -31,4 +38,5 @@ visible = false
 position = Vector2(0, 4)
 polygon = PackedVector2Array(102, 16, 101, -23, -18, -114, -80, -114, -79, -6, -81, 106, -16, 104)
 
+[connection signal="forward_input_received" from="Thrusters" to="." method="_on_thrusters_forward_input_received"]
 [connection signal="node_reached_center" from="PickupVacuum" to="." method="_on_pickup_vacuum_node_reached_center"]

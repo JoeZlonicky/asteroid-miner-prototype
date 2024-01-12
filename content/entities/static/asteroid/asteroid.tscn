@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b87x1kykkcd8m"]
+[gd_scene load_steps=10 format=3 uid="uid://b87x1kykkcd8m"]
 
 [ext_resource type="Script" path="res://content/entities/static/asteroid/asteroid.gd" id="1_but43"]
 [ext_resource type="Shader" path="res://assets/shaders/flash.gdshader" id="2_lblnn"]
 [ext_resource type="Texture2D" uid="uid://p6vmxt5j72er" path="res://assets/art/entities/asteroid/asteroid.svg" id="3_gckv0"]
+[ext_resource type="PackedScene" uid="uid://dgv1junxrsj3a" path="res://components/pickup_spawner/pickup_spawner.tscn" id="4_7ojtr"]
+[ext_resource type="Resource" uid="uid://detpa4q3sm7m0" path="res://content/items/ore/ore.tres" id="5_0s381"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_osif2"]
 shader = ExtResource("2_lblnn")
@@ -62,3 +64,7 @@ polygon = PackedVector2Array(-92, -211, 9, -206, 44, -158, 139, -161, 214, -92, 
 libraries = {
 "": SubResource("AnimationLibrary_240tl")
 }
+
+[node name="PickupSpawner" parent="." instance=ExtResource("4_7ojtr")]
+possible_items = Array[Resource("res://content/items/item_data.gd")]([ExtResource("5_0s381")])
+n = 5
