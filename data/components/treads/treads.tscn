@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://da6nuxjpj47d5"]
-
-[ext_resource type="PackedScene" uid="uid://36fb4ausy3u8" path="res://data/components/component.tscn" id="1_hxiv5"]
-[ext_resource type="Script" path="res://data/components/treads/treads.gd" id="2_fkij1"]
-
-[node name="Treads" instance=ExtResource("1_hxiv5")]
-script = ExtResource("2_fkij1")

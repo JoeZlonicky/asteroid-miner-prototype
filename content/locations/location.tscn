@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bemjvirh1dri8"]
+
+[ext_resource type="Script" path="res://content/locations/location.gd" id="1_atwux"]
+[ext_resource type="PackedScene" uid="uid://b0e1bhd7k37h6" path="res://content/entities/entity_spawner/player_spawn_marker.tscn" id="2_ld4cm"]
+
+[node name="Location" type="Node2D"]
+script = ExtResource("1_atwux")
+
+[node name="DefaultPlayerSpawnMarker" parent="." instance=ExtResource("2_ld4cm")]
+
+[node name="Camera2D" type="Camera2D" parent="."]

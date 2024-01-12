@@ -3,7 +3,7 @@ extends CanvasLayer
 
 const SPEED_UNIT = "m/s"
 
-@export var vehicle: Entity
+@export var vehicle: CharacterBody2D
 
 @onready var speed_label: Label = $SpeedLabel
 
@@ -22,6 +22,6 @@ func _physics_process(_delta: float) -> void:
 	speed_label.text = str(speed) + SPEED_UNIT
 
 
-func set_vehicle(new_vehicle: Entity) -> void:
+func set_vehicle(new_vehicle: CharacterBody2D) -> void:
 	vehicle = new_vehicle
 	visible = (vehicle != null)

@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://cplndshccq2rs"]
+
+[ext_resource type="Script" path="res://content/entities/player_ship/player_ship.gd" id="1_dvebg"]
+[ext_resource type="PackedScene" uid="uid://clydoun60iql" path="res://content/weapons/blasters/blasters.tscn" id="2_avet5"]
+[ext_resource type="Texture2D" uid="uid://bsivagbf4f1jm" path="res://assets/art/entities/player_ship/player_ship.svg" id="2_p65gm"]
+[ext_resource type="PackedScene" uid="uid://c5xxfcf4yrqqj" path="res://components/tank_controller/tank_controller_component.tscn" id="3_6yd2e"]
+[ext_resource type="PackedScene" uid="uid://dnaqqxwvavivp" path="res://components/inventory/inventory_component.tscn" id="4_lans1"]
+[ext_resource type="PackedScene" uid="uid://b3sleru8ecrea" path="res://components/vacuum/vacuum_component.tscn" id="5_ntd4j"]
+[ext_resource type="PackedScene" uid="uid://b31ln3jkmbjjd" path="res://components/vehicle/vehicle_component.tscn" id="8_cegip"]
+
+[node name="PlayerShip" type="CharacterBody2D"]
+collision_layer = 9
+script = ExtResource("1_dvebg")
+
+[node name="Blasters" parent="." instance=ExtResource("2_avet5")]
+position = Vector2(0, -118)
+
+[node name="Thrusters" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_6yd2e")]
+position = Vector2(0, 120)
+character = NodePath("..")
+
+[node name="Inventory" parent="." instance=ExtResource("4_lans1")]
+
+[node name="PickupVacuum" parent="." instance=ExtResource("5_ntd4j")]
+
+[node name="VehicleComponent" parent="." node_paths=PackedStringArray("entity") instance=ExtResource("8_cegip")]
+entity = NodePath("..")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_p65gm")
+
+[node name="CollisionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(0, 4)
+polygon = PackedVector2Array(102, 16, 101, -23, -18, -114, -80, -114, -79, -6, -81, 106, -16, 104)
+
+[connection signal="item_added" from="Inventory" to="." method="_on_inventory_item_added"]
+[connection signal="item_pickup" from="PickupVacuum" to="." method="_on_pickup_vacuum_item_pickup"]
