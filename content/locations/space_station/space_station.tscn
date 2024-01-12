@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bemjvirh1dri8" path="res://content/locations/location.tscn" id="1_ap2yn"]
 [ext_resource type="Script" path="res://content/locations/space_station/space_station.gd" id="2_0r7of"]
-[ext_resource type="PackedScene" uid="uid://cnt2gonn60ik2" path="res://content/entities/docked_player_ship/docked_player_ship.tscn" id="2_6k0w3"]
+[ext_resource type="PackedScene" uid="uid://cnt2gonn60ik2" path="res://content/entities/static/docked_player_ship/docked_player_ship.tscn" id="2_6k0w3"]
 [ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://content/locations/space/background/space_background.tscn" id="3_vgtnc"]
-[ext_resource type="PackedScene" uid="uid://cfb14fsu1v5v5" path="res://content/entities/crate/crate.tscn" id="5_bakk4"]
+[ext_resource type="PackedScene" uid="uid://cfb14fsu1v5v5" path="res://content/entities/static/crate/crate.tscn" id="5_bakk4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8vphr"]
 size = Vector2(3839, 48)

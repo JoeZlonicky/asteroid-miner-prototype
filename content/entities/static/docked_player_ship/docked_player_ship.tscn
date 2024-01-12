@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnt2gonn60ik2"]
 
 [ext_resource type="Texture2D" uid="uid://l5bvxg4o17xe" path="res://assets/art/entities/player_ship/player_ship_docked.svg" id="2_ahgkh"]
-[ext_resource type="Script" path="res://content/entities/docked_player_ship/docked_player_ship.gd" id="2_ontt7"]
+[ext_resource type="Script" path="res://content/entities/static/docked_player_ship/docked_player_ship.gd" id="2_ontt7"]
 [ext_resource type="PackedScene" uid="uid://b43vj03bxa5lh" path="res://components/interactable/interactable_component.tscn" id="3_x47t1"]
 
 [node name="DockedPlayerShip" type="CharacterBody2D"]

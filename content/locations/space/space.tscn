@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bemjvirh1dri8" path="res://content/locations/location.tscn" id="1_2o32g"]
 [ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://content/locations/space/background/space_background.tscn" id="1_wms5o"]
-[ext_resource type="PackedScene" uid="uid://b87x1kykkcd8m" path="res://content/entities/asteroid/asteroid.tscn" id="2_mxmhh"]
-[ext_resource type="PackedScene" uid="uid://cxootfqdi7tqi" path="res://content/entities/space_station/space_station.tscn" id="4_3gghn"]
+[ext_resource type="PackedScene" uid="uid://b87x1kykkcd8m" path="res://content/entities/static/asteroid/asteroid.tscn" id="2_mxmhh"]
+[ext_resource type="PackedScene" uid="uid://cxootfqdi7tqi" path="res://content/entities/static/space_station/space_station.tscn" id="4_3gghn"]
 
 [node name="Space" instance=ExtResource("1_2o32g")]
 
