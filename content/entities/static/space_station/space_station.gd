@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-func _on_interact_area_interacted_with() -> void:
+func _on_interactable_component_interacted_with() -> void:
 	var game: Game = get_tree().root.get_child(0) as Game
 	assert(game != null)
 	

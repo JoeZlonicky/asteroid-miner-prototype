@@ -15,13 +15,13 @@ script = ExtResource("1_75lbg")
 [node name="Blasters" parent="." instance=ExtResource("2_ejf7b")]
 position = Vector2(0, -118)
 
-[node name="TankControllerComponent" parent="." instance=ExtResource("3_w84g4")]
+[node name="Thrusters" parent="." instance=ExtResource("3_w84g4")]
 position = Vector2(0, 120)
 
-[node name="LeftTrail" parent="TankControllerComponent" instance=ExtResource("4_3ebd3")]
+[node name="LeftTrail" parent="Thrusters" instance=ExtResource("4_3ebd3")]
 position = Vector2(-40, -3)
 
-[node name="RightTrail" parent="TankControllerComponent" instance=ExtResource("4_3ebd3")]
+[node name="RightTrail" parent="Thrusters" instance=ExtResource("4_3ebd3")]
 position = Vector2(40, -3)
 
 [node name="PickupVacuum" parent="." instance=ExtResource("5_2g1su")]

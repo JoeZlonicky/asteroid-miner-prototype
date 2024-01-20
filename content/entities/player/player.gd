@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
-@onready var inventory: InventoryComponent = $Inventory
+@onready var inventory: InventoryComponent = $InventoryComponent
 @onready var remote_transform: RemoteTransform2D = $RemoteTransform2D
 
 

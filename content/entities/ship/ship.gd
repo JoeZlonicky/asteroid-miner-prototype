@@ -2,16 +2,17 @@ class_name PlayerShip
 extends CharacterBody2D
 
 
+@onready var thrusters: TankControllerComponent = $Thrusters
+@onready var left_trail: GPUParticles2D = $Thrusters/LeftTrail
+@onready var right_trail: GPUParticles2D = $Thrusters/RightTrail
 @onready var vehicle_component: VehicleComponent = $VehicleComponent
-@onready var tank_controller_component: TankControllerComponent = $TankControllerComponent
-@onready var left_trail: GPUParticles2D = $TankControllerComponent/LeftTrail
-@onready var right_trail: GPUParticles2D = $TankControllerComponent/RightTrail
 
 
 func _physics_process(_delta: float) -> void:
-	left_trail.emitting = tank_controller_component.forward_input or tank_controller_component.rotate_input > 0.0
-	right_trail.emitting = tank_controller_component.forward_input or tank_controller_component.rotate_input < 0.0
-	
+	var has_forward_thrust: bool = thrusters.forward_input > 0.0
+	left_trail.emitting = has_forward_thrust or thrusters.rotate_input > 0.0
+	right_trail.emitting = has_forward_thrust or thrusters.rotate_input < 0.0
+
 
 func _on_pickup_vacuum_node_reached_center(pickup: Pickup) -> void:
 	var item_data: ItemData = pickup.item_data

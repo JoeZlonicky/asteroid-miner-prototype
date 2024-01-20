@@ -13,11 +13,11 @@ texture = ExtResource("2_ahgkh")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-78, -406, 77, -404, 144.359, -317.182, 169, -364, 254, -368, 289.902, -129.593, 437, 60, 441, 323, 241, 323, 283, 402, 49, 402, 86, 319, -1, 338, -85, 321, -48, 402, -286, 402, -238, 319, -438, 321, -440, 64, -286, -136, -255, -366, -163, -364, -146, -317)
 
-[node name="RightInteractArea" parent="." instance=ExtResource("3_x47t1")]
+[node name="RightInteractableComponent" parent="." instance=ExtResource("3_x47t1")]
 position = Vector2(444, 135)
 
-[node name="LeftInteractArea" parent="." instance=ExtResource("3_x47t1")]
+[node name="LeftInteractableComponent" parent="." instance=ExtResource("3_x47t1")]
 position = Vector2(-437, 132)
 
-[connection signal="interacted_with" from="RightInteractArea" to="." method="_on_right_interact_area_interacted_with"]
-[connection signal="interacted_with" from="LeftInteractArea" to="." method="_on_left_interact_area_interacted_with"]
+[connection signal="interacted_with" from="RightInteractableComponent" to="." method="_on_right_interactable_component_interacted_with"]
+[connection signal="interacted_with" from="LeftInteractableComponent" to="." method="_on_left_interactable_component_interacted_with"]

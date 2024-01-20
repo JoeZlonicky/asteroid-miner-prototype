@@ -5,7 +5,7 @@ const DEFAULT_DRIFT_SPEED: float = 20.0
 
 var item_data: ItemData = null
 
-@onready var sprite: Sprite2D = $Sprite
+@onready var sprite: Sprite2D = $Sprite2D
 
 
 func _ready() -> void:

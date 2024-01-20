@@ -2,8 +2,8 @@ class_name OctagonalControllerComponent
 extends Node2D
 
 
-var move_speed: float = 650.0
-var rotation_speed: float = 10.0
+@export var move_speed: float = 650.0
+@export var rotation_speed: float = 10.0
 
 var last_input_direction: Vector2 = Vector2.ZERO
 

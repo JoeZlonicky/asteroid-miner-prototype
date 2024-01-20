@@ -4,9 +4,8 @@ extends Area2D
 
 signal node_reached_center(node: CharacterBody2D)
 
-var vacuum_start_speed: float = 0.0
-var vacuum_acceleration: float = 400.0
-var vacuum_max_speed: float = 800.0
+@export var acceleration: float = 400.0
+@export var max_speed: float = 800.0
 
 var affected_nodes: Dictionary = {}  # CharacterBody2D : current vacuum speed
 
@@ -19,8 +18,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	for node: CharacterBody2D in affected_nodes:
-		affected_nodes[node] = min(affected_nodes[node] + vacuum_acceleration * delta,
-			vacuum_max_speed)
+		affected_nodes[node] = min(affected_nodes[node] + acceleration * delta,
+			max_speed)
 		
 		var direction: Vector2 = (global_position - node.global_position).normalized()
 		node.velocity = direction * affected_nodes[node]
@@ -32,7 +31,7 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 	
 	if not affected_nodes.has(body):
-		affected_nodes[body] = vacuum_start_speed
+		affected_nodes[body] = 0.0
 		body.tree_exiting.connect(_on_node_tree_exiting.bind(body))
 
 

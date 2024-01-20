@@ -1,4 +1,4 @@
-class_name PickupSpawner
+class_name PickupSpawnerComponent
 extends Node2D
 
 
