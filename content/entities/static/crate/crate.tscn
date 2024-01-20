@@ -17,5 +17,6 @@ position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_vix3j")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("3_lldwc")]
+text_offset = Vector2(0, -150)
 
 [node name="InventoryComponent" parent="." instance=ExtResource("4_1a1dd")]

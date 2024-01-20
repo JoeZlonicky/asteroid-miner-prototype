@@ -16,5 +16,6 @@ polygon = PackedVector2Array(-961, -614, -854, -615, -855, -723, -816, -759, -69
 
 [node name="InteractableComponent" parent="." instance=ExtResource("3_vhmlw")]
 position = Vector2(-80, -740)
+text = "'E' to enter"
 
 [connection signal="interacted_with" from="InteractableComponent" to="." method="_on_interactable_component_interacted_with"]

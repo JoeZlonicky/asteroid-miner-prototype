@@ -15,9 +15,13 @@ polygon = PackedVector2Array(-78, -406, 77, -404, 144.359, -317.182, 169, -364, 
 
 [node name="RightInteractableComponent" parent="." instance=ExtResource("3_x47t1")]
 position = Vector2(444, 135)
+text = "'E' to board"
+text_offset = Vector2(175, -100)
 
 [node name="LeftInteractableComponent" parent="." instance=ExtResource("3_x47t1")]
 position = Vector2(-437, 132)
+text = "'E' to board"
+text_offset = Vector2(-200, -100)
 
 [connection signal="interacted_with" from="RightInteractableComponent" to="." method="_on_right_interactable_component_interacted_with"]
 [connection signal="interacted_with" from="LeftInteractableComponent" to="." method="_on_left_interactable_component_interacted_with"]
