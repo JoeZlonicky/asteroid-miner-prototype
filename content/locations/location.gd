@@ -4,7 +4,7 @@ extends Node2D
 
 signal player_spawned(player: Player)
 
-const PLAYER_SHIP_SCENE: PackedScene = preload("uid://cruwcxm1lvu8k")
+const PLAYER_SHIP_SCENE: PackedScene = preload("uid://2cs02ipd30sh")
 const PLAYER_SCENE: PackedScene = preload("uid://dw2bw2mehkoi5")
 
 @onready var camera: Camera2D = $Camera2D
