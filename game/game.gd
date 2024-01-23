@@ -7,7 +7,7 @@ const MIN_WINDOW_SIZE = Vector2(800, 600)
 
 var player: Player = null
 
-@onready var location: Location = null
+@onready var location: Node2D = null
 
 @onready var general_hud: GeneralHUD = $GeneralHUD
 @onready var vehicle_hud: VehicleHUD = $VehicleHUD
@@ -20,20 +20,12 @@ func _ready() -> void:
 
 
 func change_location(to: LocationData) -> void:
-	var new_location: Location = to.scene.instantiate()
+	var new_location: Node2D = to.scene.instantiate()
 	if location:
 		if player:
 			player.get_parent().remove_child(player)
 		location.queue_free()
 	location = new_location
-	location.player_spawned.connect(_on_player_spawned)
 	
 	add_child(new_location)
 	move_child(new_location, 0)
-	
-	location.spawn_player(player)
-
-
-func _on_player_spawned(spawned_player: Player) -> void:
-	player = spawned_player
-	

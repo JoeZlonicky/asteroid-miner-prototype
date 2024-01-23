@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://cac3tpqtq4fos"]
+
+[ext_resource type="Script" path="res://content/backgrounds/space/space_background.gd" id="1_ffn4p"]
+[ext_resource type="Shader" path="res://assets/shaders/stars.gdshader" id="2_vjobg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jcras"]
+shader = ExtResource("2_vjobg")
+shader_parameter/bg_color = Color(0.0627451, 0.0784314, 0.121569, 1)
+shader_parameter/star_color = Color(0.643137, 0.866667, 0.858824, 0.501961)
+shader_parameter/star_size = 2.0
+shader_parameter/star_density = 0.32
+shader_parameter/star_twinkle_speed = 5.0
+shader_parameter/camera_offset = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bk2y3"]
+resource_local_to_scene = true
+shader = ExtResource("2_vjobg")
+shader_parameter/bg_color = Color(0, 0, 0, 0)
+shader_parameter/star_color = Color(0.643137, 0.866667, 0.858824, 0.619608)
+shader_parameter/star_size = 3.0
+shader_parameter/star_density = 0.32
+shader_parameter/star_twinkle_speed = 4.0
+shader_parameter/camera_offset = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ntcvj"]
+resource_local_to_scene = true
+shader = ExtResource("2_vjobg")
+shader_parameter/bg_color = Color(0, 0, 0, 0)
+shader_parameter/star_color = Color(0.643137, 0.866667, 0.858824, 0.564706)
+shader_parameter/star_size = 5.0
+shader_parameter/star_density = 0.2
+shader_parameter/star_twinkle_speed = 4.0
+shader_parameter/camera_offset = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_isfvo"]
+resource_local_to_scene = true
+shader = ExtResource("2_vjobg")
+shader_parameter/bg_color = Color(0, 0, 0, 0)
+shader_parameter/star_color = Color(0.772549, 0.772549, 0.772549, 0.45098)
+shader_parameter/star_size = 7.0
+shader_parameter/star_density = 0.198
+shader_parameter/star_twinkle_speed = 0.0
+shader_parameter/camera_offset = null
+
+[node name="SpaceBackground" type="CanvasLayer"]
+layer = -1
+script = ExtResource("1_ffn4p")
+
+[node name="StaticStars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_jcras")
+custom_minimum_size = Vector2(3840, 2160)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3840.0
+offset_bottom = 2160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FarStars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_bk2y3")
+custom_minimum_size = Vector2(3840, 2160)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3840.0
+offset_bottom = 2160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MediumStars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ntcvj")
+custom_minimum_size = Vector2(3840, 2160)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3840.0
+offset_bottom = 2160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CloseStars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_isfvo")
+custom_minimum_size = Vector2(3840, 2160)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3840.0
+offset_bottom = 2160.0
+grow_horizontal = 2
+grow_vertical = 2

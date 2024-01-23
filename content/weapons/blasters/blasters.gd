@@ -24,5 +24,6 @@ func _physics_process(_delta: float) -> void:
 
 func spawn_projectile(spawn_position: Vector2) -> void:
 	var projectile: Projectile = PROJECTILE_SCENE.instantiate()
-	owner.get_parent().add_child(projectile)
+	var game: Game = Utility.get_game(self)
+	game.location.add_child(projectile)
 	projectile.fire(spawn_position, global_rotation - PI / 2.0, owner.velocity.length())

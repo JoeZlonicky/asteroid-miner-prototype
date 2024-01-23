@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b31ln3jkmbjjd"]
-
-[ext_resource type="Script" path="res://components/vehicle/vehicle_component.gd" id="2_p4nmb"]
-
-[node name="VehicleComponent" type="Node2D"]
-script = ExtResource("2_p4nmb")

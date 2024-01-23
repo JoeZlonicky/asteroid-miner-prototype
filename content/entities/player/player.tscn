@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dw2bw2mehkoi5"]
+[gd_scene load_steps=6 format=3 uid="uid://bc7sg8jrkvds8"]
 
 [ext_resource type="Script" path="res://content/entities/player/player.gd" id="2_ocis5"]
 [ext_resource type="Texture2D" uid="uid://dev7mkkgob585" path="res://assets/art/entities/player/player.svg" id="3_owsw1"]
-[ext_resource type="PackedScene" uid="uid://da6nuxjpj47d5" path="res://components/octagonal_controller/octagonal_controller_component.tscn" id="4_266d1"]
-[ext_resource type="PackedScene" uid="uid://dnaqqxwvavivp" path="res://components/inventory/inventory_component.tscn" id="5_obvel"]
+[ext_resource type="PackedScene" uid="uid://da6nuxjpj47d5" path="res://base_components/octagonal_movement_controller/octagonal_movement_controller.tscn" id="3_ypacr"]
+[ext_resource type="PackedScene" uid="uid://dnaqqxwvavivp" path="res://base_components/inventory/inventory.tscn" id="4_eafwe"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1anhb"]
 radius = 90.0056
@@ -18,10 +18,10 @@ texture = ExtResource("3_owsw1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1anhb")
 
-[node name="Treads" parent="." instance=ExtResource("4_266d1")]
+[node name="Treads" parent="." instance=ExtResource("3_ypacr")]
 
-[node name="InventoryComponent" parent="." instance=ExtResource("5_obvel")]
+[node name="Inventory" parent="." instance=ExtResource("4_eafwe")]
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
 
-[connection signal="item_added" from="InventoryComponent" to="." method="_on_inventory_item_added"]
+[connection signal="item_added" from="Inventory" to="." method="_on_inventory_item_added"]

@@ -2,10 +2,10 @@ class_name PlayerShip
 extends CharacterBody2D
 
 
-@onready var thrusters: TankControllerComponent = $Thrusters
+@onready var thrusters: TankMovementController = $Thrusters
 @onready var left_trail: GPUParticles2D = $Thrusters/LeftTrail
 @onready var right_trail: GPUParticles2D = $Thrusters/RightTrail
-@onready var vehicle_component: VehicleComponent = $VehicleComponent
+@onready var vehicle_seat: VehicleSeat = $VehicleSeat
 
 
 func _physics_process(_delta: float) -> void:
@@ -16,6 +16,22 @@ func _physics_process(_delta: float) -> void:
 
 func _on_pickup_vacuum_node_reached_center(pickup: Pickup) -> void:
 	var item_data: ItemData = pickup.item_data
-	var player: Player = vehicle_component.driver as Player
+	var player: Player = vehicle_seat.get_driver() as Player
 	if player.inventory.add_item(item_data):
 		pickup.queue_free()
+
+
+func _on_vehicle_seat_new_driver_entered(_new_driver: CharacterBody2D) -> void:
+	var game: Game = Utility.get_game(self)
+	if not game:
+		return
+	
+	game.vehicle_hud.set_vehicle(self)
+
+
+func _on_vehicle_seat_driver_evicted(_evicted_driver: CharacterBody2D) -> void:
+	var game: Game = Utility.get_game(self)
+	if not game:
+		return
+	
+	game.vehicle_hud.set_vehicle(null)

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://da6nuxjpj47d5"]
+
+[ext_resource type="Script" path="res://base_components/octagonal_movement_controller/octagonal_movement_controller.gd" id="1_3uly6"]
+
+[node name="OctagonalMovementController" type="Node2D"]
+script = ExtResource("1_3uly6")
