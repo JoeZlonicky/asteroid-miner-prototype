@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="LocationData" load_steps=3 format=3 uid="uid://chp2av2ap8ukj"]
-
-[ext_resource type="PackedScene" uid="uid://cssu3grsdpbqj" path="res://content/locations/space_station/space_station.tscn" id="1_2ib8b"]
-[ext_resource type="Script" path="res://content/locations/location_data.gd" id="1_n4ck0"]
-
-[resource]
-script = ExtResource("1_n4ck0")
-name = "Space Station"
-scene = ExtResource("1_2ib8b")

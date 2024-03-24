@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b3q5b7hm5t5t4"]
 
-[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://assets/fonts/chakra_petch_regular.ttf" id="1_njjk4"]
+[ext_resource type="FontFile" uid="uid://d4ghy2wdms8ms" path="res://ui/fonts/chakra_petch_regular.ttf" id="1_njjk4"]
 [ext_resource type="Script" path="res://ui/general_hud/item_pickup_notification/item_pickup_notification.gd" id="2_m16cg"]
 
 [sub_resource type="Animation" id="Animation_ml1t8"]

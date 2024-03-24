@@ -1,8 +1,6 @@
 class_name Game
 extends Node2D
 
-const MIN_WINDOW_SIZE = Vector2(800, 600)
-
 @export var test_location: LocationData
 
 var player: Player = null
@@ -14,7 +12,7 @@ var player: Player = null
 
 
 func _ready() -> void:
-	DisplayServer.window_set_min_size(MIN_WINDOW_SIZE)
+	Config.init()
 	if OS.is_debug_build() and test_location:
 		change_location(test_location)
 

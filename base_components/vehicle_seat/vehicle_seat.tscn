@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b31ln3jkmbjjd"]
-
-[ext_resource type="Script" path="res://base_components/vehicle_seat/vehicle_seat.gd" id="1_8e6a8"]
-
-[node name="VehicleSeat" type="Node2D"]
-script = ExtResource("1_8e6a8")

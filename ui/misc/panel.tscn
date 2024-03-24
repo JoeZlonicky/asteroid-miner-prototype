@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://xmo4ookofai8"]
 
-[ext_resource type="Texture2D" uid="uid://bgto1s47fc1fb" path="res://assets/art/ui/menu_panel.svg" id="1_g1aed"]
+[ext_resource type="Texture2D" uid="uid://bgto1s47fc1fb" path="res://ui/misc/menu_panel.svg" id="1_g1aed"]
 
 [node name="Panel" type="NinePatchRect"]
 offset_left = 1159.0
