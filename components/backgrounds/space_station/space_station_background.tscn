@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbvwmowb7u1ii"]
+
+[ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://components/backgrounds/space/space_background.tscn" id="1_d13lo"]
+[ext_resource type="Shader" path="res://shaders/stars.gdshader" id="2_x5cnn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_avtnh"]
+resource_local_to_scene = true
+shader = ExtResource("2_x5cnn")
+shader_parameter/bg_color = Color(0, 0, 0, 0)
+shader_parameter/star_color = Color(0.643137, 0.866667, 0.858824, 0.619608)
+shader_parameter/star_size = 3.0
+shader_parameter/star_density = 0.32
+shader_parameter/star_twinkle_speed = 4.0
+shader_parameter/camera_offset = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ai4js"]
+resource_local_to_scene = true
+shader = ExtResource("2_x5cnn")
+shader_parameter/bg_color = Color(0, 0, 0, 0)
+shader_parameter/star_color = Color(0.643137, 0.866667, 0.858824, 0.564706)
+shader_parameter/star_size = 5.0
+shader_parameter/star_density = 0.2
+shader_parameter/star_twinkle_speed = 4.0
+shader_parameter/camera_offset = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vto61"]
+resource_local_to_scene = true
+shader = ExtResource("2_x5cnn")
+shader_parameter/bg_color = Color(0, 0, 0, 0)
+shader_parameter/star_color = Color(0.772549, 0.772549, 0.772549, 0.45098)
+shader_parameter/star_size = 7.0
+shader_parameter/star_density = 0.198
+shader_parameter/star_twinkle_speed = 0.0
+shader_parameter/camera_offset = null
+
+[node name="SpaceStationBackground" instance=ExtResource("1_d13lo")]
+
+[node name="FarStars" parent="." index="1"]
+material = SubResource("ShaderMaterial_avtnh")
+parallax_strength = 0.01
+
+[node name="MediumStars" parent="." index="2"]
+material = SubResource("ShaderMaterial_ai4js")
+parallax_strength = 0.05
+
+[node name="CloseStars" parent="." index="3"]
+material = SubResource("ShaderMaterial_vto61")
+parallax_strength = 0.5
+
+[node name="Dim" type="ColorRect" parent="." index="4"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.478431)

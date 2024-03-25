@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnryjyjuyc6jk"]
+
+[ext_resource type="Script" path="res://ui/general_hud/notification_display/notification_display.gd" id="1_bph3q"]
+
+[node name="NotificationDisplay" type="VBoxContainer"]
+clip_contents = true
+alignment = 2
+script = ExtResource("1_bph3q")

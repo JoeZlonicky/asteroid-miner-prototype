@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://dy3hoscn5tnmm"]
+
+[ext_resource type="Texture2D" uid="uid://clvwuwjms7b0p" path="res://components/trail/hexagon.svg" id="1_q82t6"]
+
+[sub_resource type="Curve" id="Curve_maiin"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_movmc"]
+curve = SubResource("Curve_maiin")
+
+[sub_resource type="Gradient" id="Gradient_vcqdl"]
+offsets = PackedFloat32Array(0, 0.469453, 1)
+colors = PackedColorArray(0.909804, 0.756863, 0.439216, 1, 0.811765, 0.341176, 0.235294, 1, 0.647059, 0.188235, 0.188235, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_w5tbn"]
+gradient = SubResource("Gradient_vcqdl")
+
+[sub_resource type="Curve" id="Curve_i5obm"]
+_data = [Vector2(0, 0.494063), 6.54141, 0.465511, 0, 0, Vector2(0.0361842, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.216686), -0.0455948, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_n4722"]
+curve = SubResource("Curve_i5obm")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_47pxo"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(4, 4, 1)
+angle_max = 720.0
+direction = Vector3(-1, 0, 0)
+spread = 10.0
+initial_velocity_min = 30.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_n4722")
+color_ramp = SubResource("GradientTexture1D_w5tbn")
+alpha_curve = SubResource("CurveTexture_movmc")
+
+[node name="Trail" type="GPUParticles2D"]
+show_behind_parent = true
+position = Vector2(-14, 0)
+amount = 32
+process_material = SubResource("ParticleProcessMaterial_47pxo")
+texture = ExtResource("1_q82t6")

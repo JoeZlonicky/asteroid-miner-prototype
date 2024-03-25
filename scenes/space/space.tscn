@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgiop2yu368ym"]
+
+[ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://components/backgrounds/space/space_background.tscn" id="1_wms5o"]
+[ext_resource type="PackedScene" uid="uid://b87x1kykkcd8m" path="res://entities/asteroid/asteroid.tscn" id="2_mxmhh"]
+[ext_resource type="PackedScene" uid="uid://cxootfqdi7tqi" path="res://entities/space_station/space_station.tscn" id="4_3gghn"]
+[ext_resource type="PackedScene" path="res://world/player_spawner/player_spawner.tscn" id="4_xaeav"]
+[ext_resource type="PackedScene" path="res://player/player_camera/player_camera.tscn" id="5_mv1yo"]
+
+[node name="Space" type="Node2D"]
+
+[node name="SpaceBackground" parent="." instance=ExtResource("1_wms5o")]
+
+[node name="Asteroid" parent="." instance=ExtResource("2_mxmhh")]
+position = Vector2(2975, 1086)
+
+[node name="SpaceStation" parent="." instance=ExtResource("4_3gghn")]
+position = Vector2(1834, 2754)
+
+[node name="PlayerSpawner" parent="." instance=ExtResource("4_xaeav")]
+position = Vector2(1760, 1816)
+spawn_behavior = 1
+
+[node name="PlayerCamera" parent="." node_paths=PackedStringArray("watch_player_spawner") instance=ExtResource("5_mv1yo")]
+watch_player_spawner = NodePath("../PlayerSpawner")
