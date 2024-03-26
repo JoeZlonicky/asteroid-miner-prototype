@@ -39,9 +39,12 @@ folder_colors={
 "res://common/": "red",
 "res://components/": "orange",
 "res://data/": "yellow",
-"res://entities/": "green",
-"res://levels/": "teal",
-"res://screens/": "blue"
+"res://dev/": "green",
+"res://entities/": "teal",
+"res://levels/": "blue",
+"res://screens/": "purple",
+"res://state/": "pink",
+"res://static/": "gray"
 }
 
 [filesystem]

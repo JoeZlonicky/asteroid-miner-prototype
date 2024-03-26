@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbjvxn16yhehg"
-path="res://.godot/imported/laser.svg-19b08b7ddc9b0b5a0341252b0ad8184f.ctex"
+uid="uid://dy4uohcio5nm5"
+path="res://.godot/imported/hexagon_glow.png-5dbce2390d535c4a0edb9560cffd3ea1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/mechanics/blasters/laser/laser.svg"
-dest_files=["res://.godot/imported/laser.svg-19b08b7ddc9b0b5a0341252b0ad8184f.ctex"]
+source_file="res://components/visual/explosion/hexagon_glow.png"
+dest_files=["res://.godot/imported/hexagon_glow.png-5dbce2390d535c4a0edb9560cffd3ea1.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=0
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

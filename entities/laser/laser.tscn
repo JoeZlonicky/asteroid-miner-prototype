@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://bhpuqbiokova"]
 
-[ext_resource type="Script" path="res://components/mechanics/blasters/laser/laser.gd" id="1_gjs60"]
-[ext_resource type="Texture2D" uid="uid://cbjvxn16yhehg" path="res://components/mechanics/blasters/laser/laser.svg" id="2_4tswj"]
-[ext_resource type="Texture2D" uid="uid://bpl0ul6oo7q11" path="res://components/mechanics/blasters/laser/laser_glow.png" id="3_11uw2"]
-[ext_resource type="Texture2D" uid="uid://88ns4ll7d5gs" path="res://components/mechanics/blasters/laser/explosion/hexagon.svg" id="4_w3yys"]
-[ext_resource type="Texture2D" uid="uid://dy4uohcio5nm5" path="res://components/mechanics/blasters/laser/explosion/hexagon_glow.png" id="5_ff1ke"]
+[ext_resource type="Script" path="res://entities/laser/laser.gd" id="1_gjs60"]
+[ext_resource type="Texture2D" uid="uid://cbjvxn16yhehg" path="res://entities/laser/laser.svg" id="2_4tswj"]
+[ext_resource type="Texture2D" uid="uid://bpl0ul6oo7q11" path="res://entities/laser/laser_glow.png" id="3_11uw2"]
+[ext_resource type="Texture2D" uid="uid://88ns4ll7d5gs" path="res://components/visual/explosion/hexagon.svg" id="4_w3yys"]
+[ext_resource type="Texture2D" uid="uid://dy4uohcio5nm5" path="res://components/visual/explosion/hexagon_glow.png" id="5_ff1ke"]
 
 [sub_resource type="Animation" id="Animation_csqgo"]
 length = 0.001

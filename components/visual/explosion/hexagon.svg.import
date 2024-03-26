@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mpl7tkap7nm8"
-path="res://.godot/imported/dark_panel.svg-9b5f3b69029dcf57d4de49912bcedf6a.ctex"
+uid="uid://88ns4ll7d5gs"
+path="res://.godot/imported/hexagon.svg-4c9c684123fe04c205c4d2422e0a1398.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/ui/inventory_panel/inventory_slot/dark_panel.svg"
-dest_files=["res://.godot/imported/dark_panel.svg-9b5f3b69029dcf57d4de49912bcedf6a.ctex"]
+source_file="res://components/visual/explosion/hexagon.svg"
+dest_files=["res://.godot/imported/hexagon.svg-4c9c684123fe04c205c4d2422e0a1398.ctex"]
 
 [params]
 

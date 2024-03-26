@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dnjtkkgogsyj8"]
 
-[ext_resource type="Material" uid="uid://dgxlpdqb33bd5" path="res://components/visual/space_background/shader_materials/static_stars.tres" id="1_morni"]
-[ext_resource type="Script" path="res://components/visual/space_background/star_layer/star_layer.gd" id="2_qhu6y"]
+[ext_resource type="Material" uid="uid://dgxlpdqb33bd5" path="res://common/shader_materials/static_stars.tres" id="1_morni"]
+[ext_resource type="Script" path="res://components/visual/star_layer/star_layer.gd" id="2_qhu6y"]
 
 [node name="StarLayer" type="ColorRect"]
 material = ExtResource("1_morni")

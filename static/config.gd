@@ -1,6 +1,3 @@
-class_name Config
-
-
 const MIN_WINDOW_SIZE = Vector2(800, 600)
 
 
