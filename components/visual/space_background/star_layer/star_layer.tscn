@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnjtkkgogsyj8"]
+
+[ext_resource type="Material" uid="uid://dgxlpdqb33bd5" path="res://components/visual/space_background/shader_materials/static_stars.tres" id="1_morni"]
+[ext_resource type="Script" path="res://components/visual/space_background/star_layer/star_layer.gd" id="2_qhu6y"]
+
+[node name="StarLayer" type="ColorRect"]
+material = ExtResource("1_morni")
+custom_minimum_size = Vector2(3840, 2160)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3840.0
+offset_bottom = 2160.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qhu6y")

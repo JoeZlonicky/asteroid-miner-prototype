@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://l5bvxg4o17xe" path="res://entities/docked_player_ship/player_ship_docked.svg" id="2_ahgkh"]
 [ext_resource type="Script" path="res://entities/docked_player_ship/docked_player_ship.gd" id="2_ontt7"]
-[ext_resource type="PackedScene" uid="uid://b43vj03bxa5lh" path="res://components/interactable_area/interactable_area.tscn" id="3_x47t1"]
-[ext_resource type="PackedScene" uid="uid://cf2yjm70xnmi3" path="res://ui/general/standard_label/standard_label.tscn" id="4_qnkht"]
+[ext_resource type="PackedScene" uid="uid://b43vj03bxa5lh" path="res://components/mechanics/interactable_area/interactable_area.tscn" id="3_x47t1"]
+[ext_resource type="PackedScene" uid="uid://cf2yjm70xnmi3" path="res://components/ui/standard_label/standard_label.tscn" id="4_qnkht"]
 
 [node name="DockedPlayerShip" type="CharacterBody2D"]
 script = ExtResource("2_ontt7")

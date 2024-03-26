@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Asteroid Miner"
-run/main_scene="res://scenes/space_station/space_station.tscn"
+run/main_scene="res://levels/space_station/space_station.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
@@ -32,6 +32,17 @@ window/vsync/vsync_mode=0
 [dotnet]
 
 project/assembly_name="Asteroid Miner"
+
+[file_customization]
+
+folder_colors={
+"res://common/": "red",
+"res://components/": "orange",
+"res://data/": "yellow",
+"res://entities/": "green",
+"res://levels/": "teal",
+"res://screens/": "blue"
+}
 
 [filesystem]
 

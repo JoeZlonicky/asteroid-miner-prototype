@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://b87x1kykkcd8m"]
+[gd_scene load_steps=9 format=3 uid="uid://b87x1kykkcd8m"]
 
 [ext_resource type="Script" path="res://entities/asteroid/asteroid.gd" id="1_but43"]
-[ext_resource type="Shader" path="res://shaders/flash.gdshader" id="2_lblnn"]
+[ext_resource type="Shader" path="res://common/shaders/flash.gdshader" id="2_lblnn"]
 [ext_resource type="Texture2D" uid="uid://p6vmxt5j72er" path="res://entities/asteroid/asteroid.svg" id="3_gckv0"]
-[ext_resource type="PackedScene" uid="uid://dgv1junxrsj3a" path="res://components/pickup_spawner/pickup_spawner.tscn" id="4_7ojtr"]
-[ext_resource type="Resource" uid="uid://detpa4q3sm7m0" path="res://data/items/ores/iron_ore/iron_ore.tres" id="5_0s381"]
+[ext_resource type="PackedScene" uid="uid://dgv1junxrsj3a" path="res://components/mechanics/pickup_spawner/pickup_spawner.tscn" id="4_7ojtr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_osif2"]
 shader = ExtResource("2_lblnn")
@@ -66,5 +65,4 @@ libraries = {
 }
 
 [node name="PickupSpawner" parent="." instance=ExtResource("4_7ojtr")]
-possible_items = Array[Resource("res://content/items/item_data.gd")]([ExtResource("5_0s381")])
 n = 5
