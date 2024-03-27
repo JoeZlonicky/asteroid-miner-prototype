@@ -2,18 +2,26 @@ class_name Asteroid
 extends StaticBody2D
 
 
-const MAX_HEALTH: int = 20
+@export var flash_sprite: FlashSprite
+@export var pickup_spawner: PickupSpawner
 
-var current_health: int = MAX_HEALTH
-
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var pickup_spawner: PickupSpawner = $PickupSpawner
+var health := Health.new(20)
 
 
-func take_damage(amount: int = 1) -> void:
-	current_health = max(current_health - amount, 0)
-	if current_health == 0:
-		pickup_spawner.spawn_pickups.call_deferred()
-		queue_free()
-	else:
-		animation_player.play("flash")
+func _ready() -> void:
+	health.died.connect(_on_death)
+	health.damaged.connect(_on_hit)
+
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("debug"):
+		health.take_damage(1)
+
+
+func _on_hit(_amount: int) -> void:
+	flash_sprite.flash()
+
+
+func _on_death() -> void:
+	pickup_spawner.spawn_pickups.call_deferred()
+	queue_free()

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnryjyjuyc6jk"]
+
+[ext_resource type="Script" path="res://components/ui/notification_container/notification_container.gd" id="1_lrkxe"]
+
+[node name="NotificationContainer" type="VBoxContainer"]
+clip_contents = true
+alignment = 2
+script = ExtResource("1_lrkxe")

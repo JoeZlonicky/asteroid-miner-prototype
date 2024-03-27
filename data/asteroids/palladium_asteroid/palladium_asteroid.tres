@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="AsteroidData" load_steps=2 format=3 uid="uid://dc38l1aga5ino"]
+
+[ext_resource type="Script" path="res://data/asteroids/asteroid_data.gd" id="1_bt636"]
+
+[resource]
+script = ExtResource("1_bt636")
+collision = PackedVector2Array()

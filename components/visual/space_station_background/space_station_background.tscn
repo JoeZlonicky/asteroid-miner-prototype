@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bbvwmowb7u1ii"]
 
-[ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://components/visual/space_background/space_background.tscn" id="1_d13lo"]
-[ext_resource type="Shader" path="res://common/shaders/stars.gdshader" id="2_x5cnn"]
+[ext_resource type="PackedScene" uid="uid://dnjtkkgogsyj8" path="res://components/visual/star_layer/star_layer.tscn" id="1_ownoi"]
+[ext_resource type="Shader" path="res://common_assets/shaders/stars.gdshader" id="2_x5cnn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_avtnh"]
 resource_local_to_scene = true
@@ -33,21 +33,32 @@ shader_parameter/star_density = 0.198
 shader_parameter/star_twinkle_speed = 0.0
 shader_parameter/camera_offset = null
 
-[node name="SpaceStationBackground" instance=ExtResource("1_d13lo")]
+[node name="SpaceStationBackground" type="CanvasLayer"]
+layer = -1
 
-[node name="FarStars" parent="." index="1"]
+[node name="StaticStars" parent="." instance=ExtResource("1_ownoi")]
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="FarStars" parent="." instance=ExtResource("1_ownoi")]
 material = SubResource("ShaderMaterial_avtnh")
+offset_right = 0.0
+offset_bottom = 0.0
 parallax_strength = 0.01
 
-[node name="MediumStars" parent="." index="2"]
+[node name="MediumStars" parent="." instance=ExtResource("1_ownoi")]
 material = SubResource("ShaderMaterial_ai4js")
+offset_right = 0.0
+offset_bottom = 0.0
 parallax_strength = 0.05
 
-[node name="CloseStars" parent="." index="3"]
+[node name="CloseStars" parent="." instance=ExtResource("1_ownoi")]
 material = SubResource("ShaderMaterial_vto61")
+offset_right = 0.0
+offset_bottom = 0.0
 parallax_strength = 0.5
 
-[node name="Dim" type="ColorRect" parent="." index="4"]
+[node name="Dim" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
