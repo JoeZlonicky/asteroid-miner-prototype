@@ -1,5 +1,5 @@
 class_name PlayerShip
-extends CharacterBody2D
+extends RigidBody2D
 
 
 var movement_controller := ShipMovementController.new()

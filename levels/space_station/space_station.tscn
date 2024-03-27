@@ -98,7 +98,7 @@ z_index = 1
 position = Vector2(1911, 505)
 
 [node name="Player" parent="." instance=ExtResource("5_ma4dt")]
-position = Vector2(1930, 1169)
+position = Vector2(2421, 946)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -106,4 +106,4 @@ update_rotation = false
 update_scale = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1930, 1169)
+position = Vector2(2421, 946)

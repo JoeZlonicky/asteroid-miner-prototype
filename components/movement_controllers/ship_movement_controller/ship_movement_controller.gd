@@ -2,60 +2,50 @@ class_name ShipMovementController
 extends RefCounted
 
 
-var foward_acceleration: float = 320.0
-var max_forward_speed: float = 700.0
+var foward_force: float = 300.0
 
-var active_velocity_deceleration: float = 300.0
-var passive_velocity_deceleration: float = 10.0
+var active_velocity_damp: float = 4.0
+var passive_velocity_damp: float = 0.04
+var damp_change_speed: float = 2.0
 
-var rotation_acceleration: float = 1.5
-var max_rotation_speed: float = 1.5
-var passive_rotation_deceleration: float = 2.0
-
-var current_rotation_speed: float = 0.0
+var rotation_force: float = 10000.0
+var passive_rotation_damp: float = 0.05
 
 
-func update(character: CharacterBody2D, input: Vector2, delta: float) -> void:
-	process_rotation(character, input, delta)
-	process_velocity(character, input, delta)
+func update(body: RigidBody2D, input: Vector2, delta: float) -> void:
+	process_rotation(body, input, delta)
+	process_velocity(body, input, delta)
 
 
-func process_velocity(character: CharacterBody2D, input: Vector2, delta: float) -> void:
+func process_velocity(body: RigidBody2D, input: Vector2, delta: float) -> void:
 	var forward_input: float = input.y
 	if forward_input > 0.0:
-		apply_active_foward_acceleration(character, delta)
+		apply_active_foward_acceleration(body, delta)
+		apply_passive_velocity_deceleration(body, delta)
 	elif forward_input < 0.0:
-		apply_active_velocity_deceleration(character, delta)
+		apply_active_velocity_deceleration(body, delta)
 	else:
-		apply_passive_velocity_deceleration(character, delta)
-	
-	character.move_and_slide()
+		apply_passive_velocity_deceleration(body, delta)
 
 
-func process_rotation(character: CharacterBody2D, input: Vector2, delta: float) -> void:
+func process_rotation(body: RigidBody2D, input: Vector2, _delta: float) -> void:
+	body.angular_damp = passive_rotation_damp
 	var rotate_input: float = input.x
-	
-	if input.x == 0:
-		current_rotation_speed = move_toward(current_rotation_speed, 0.0, 
-			passive_rotation_deceleration * delta)
-	else:
-		current_rotation_speed = move_toward(current_rotation_speed,
-			rotate_input * max_rotation_speed, rotation_acceleration * delta)
-	
-	character.rotate(current_rotation_speed * delta)
+	if rotate_input:
+		body.apply_torque(signf(rotate_input) * rotation_force)
 
 
-func apply_active_foward_acceleration(character: CharacterBody2D, delta: float) -> void:
-	var angle: float = character.rotation - PI / 2.0
+func apply_active_foward_acceleration(body: RigidBody2D, _delta: float) -> void:
+	var angle: float = body.rotation - PI / 2.0
 	var direction := Vector2(cos(angle), sin(angle))
-	character.velocity = character.velocity.move_toward(max_forward_speed * direction,
-		foward_acceleration * delta)
+	body.apply_force(direction * foward_force)
 
 
-func apply_active_velocity_deceleration(character: CharacterBody2D, delta: float) -> void:
-	character.velocity = character.velocity.move_toward(Vector2.ZERO, active_velocity_deceleration * delta)
+func apply_active_velocity_deceleration(body: RigidBody2D, delta: float) -> void:
+	body.linear_damp = move_toward(body.linear_damp, active_velocity_damp,
+		damp_change_speed * delta)
 
 
-func apply_passive_velocity_deceleration(character: CharacterBody2D, delta: float) -> void:
-	character.velocity = character.velocity.move_toward(Vector2.ZERO,
-		passive_velocity_deceleration * delta)
+func apply_passive_velocity_deceleration(body: RigidBody2D, delta: float) -> void:
+	body.linear_damp = move_toward(body.linear_damp, passive_velocity_damp,
+		damp_change_speed * delta)
