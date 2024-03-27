@@ -19,3 +19,4 @@ func _physics_process(delta: float) -> void:
 
 func _on_pickup_vacuum_node_reached_center(pickup: Pickup) -> void:
 	var item_data: ItemData = pickup.item_data
+	Session.player_inventory.add_item(item_data)

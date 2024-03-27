@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends StaticBody2D
 
 
 var scene_to_change_to: PackedScene = load("res://levels/space/space.tscn")

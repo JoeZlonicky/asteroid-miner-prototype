@@ -25,8 +25,7 @@ collision_mask = 4
 texture = ExtResource("7_tm0fu")
 
 [node name="CollisionPolygon" type="CollisionPolygon2D" parent="."]
-visible = false
 position = Vector2(0, 4)
-polygon = PackedVector2Array(102, 16, 101, -23, -18, -114, -80, -114, -79, -6, -81, 106, -16, 104)
+polygon = PackedVector2Array(109, 10, 74, -35, 63, -94, 41, -94, 18, -104, -20, -104, -42, -94, -64, -96, -72, -36, -111, 13, -108, 71, -70, 97, 70, 97, 107, 73)
 
 [connection signal="node_reached_center" from="PickupVacuum" to="." method="_on_pickup_vacuum_node_reached_center"]

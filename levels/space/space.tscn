@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cac3tpqtq4fos" path="res://components/visual/space_background/space_background.tscn" id="1_wms5o"]
 [ext_resource type="PackedScene" uid="uid://b87x1kykkcd8m" path="res://entities/asteroid/asteroid.tscn" id="2_mxmhh"]
+[ext_resource type="Resource" uid="uid://ds853gw1v6wue" path="res://data/asteroids/iron_asteroid/iron_asteroid.tres" id="3_fank2"]
 [ext_resource type="PackedScene" uid="uid://2cs02ipd30sh" path="res://entities/player_ship/player_ship.tscn" id="4_1tx2m"]
 [ext_resource type="PackedScene" uid="uid://cxootfqdi7tqi" path="res://entities/space_station/space_station.tscn" id="4_3gghn"]
-[ext_resource type="PackedScene" uid="uid://cssu3grsdpbqj" path="res://levels/space_station/space_station.tscn" id="4_8fc0f"]
 
 [node name="Space" type="Node2D"]
 
@@ -12,10 +12,10 @@
 
 [node name="Asteroid" parent="." instance=ExtResource("2_mxmhh")]
 position = Vector2(2975, 1086)
+data = ExtResource("3_fank2")
 
 [node name="SpaceStation" parent="." instance=ExtResource("4_3gghn")]
 position = Vector2(1834, 2754)
-scene_to_change_to = ExtResource("4_8fc0f")
 
 [node name="Ship" parent="." instance=ExtResource("4_1tx2m")]
 position = Vector2(1740, 1543)

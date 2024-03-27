@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b87x1kykkcd8m"]
+[gd_scene load_steps=4 format=3 uid="uid://b87x1kykkcd8m"]
 
 [ext_resource type="Script" path="res://entities/asteroid/asteroid.gd" id="1_but43"]
-[ext_resource type="PackedScene" uid="uid://ds0r33iio42ge" path="res://components/visual/flash_sprite/flash_sprite.tscn" id="2_j0jua"]
 [ext_resource type="Shader" path="res://common_assets/shaders/flash.gdshader" id="2_lblnn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1gj30"]
@@ -10,15 +9,11 @@ shader = ExtResource("2_lblnn")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_strength = 0.0
 
-[node name="Asteroid" type="StaticBody2D" node_paths=PackedStringArray("flash_sprite", "pickup_spawner")]
+[node name="Asteroid" type="StaticBody2D"]
 collision_layer = 3
 script = ExtResource("1_but43")
-flash_sprite = NodePath("FlashSprite")
-pickup_spawner = NodePath("")
 
-[node name="FlashSprite" parent="." instance=ExtResource("2_j0jua")]
+[node name="Sprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_1gj30")
-flash_color = Color(1, 1, 1, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-92, -211, 9, -206, 44, -158, 139, -161, 214, -92, 236, 13, 210, 132, 147, 201, 49, 168, -34, 213, -141, 209, -192, 135, -192, 58, -236, 10, -232, -100, -146, -140)

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b43vj03bxa5lh" path="res://components/mechanics/interactable_area/interactable_area.tscn" id="3_vhmlw"]
 [ext_resource type="PackedScene" uid="uid://cf2yjm70xnmi3" path="res://components/ui/standard_label/standard_label.tscn" id="4_713yj"]
 
-[node name="SpaceStation" type="CharacterBody2D"]
+[node name="SpaceStation" type="StaticBody2D"]
 collision_layer = 3
 script = ExtResource("2_m6yow")
 
@@ -13,10 +13,10 @@ script = ExtResource("2_m6yow")
 texture = ExtResource("2_q0lng")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-961, -614, -854, -615, -855, -723, -816, -759, -695, -756, -660, -725, -655, -617, -299, -615, -300, -635, -265, -670, 101, -668, 140, -636, 142, -617, 553, -614, 586, -578, 589, -386, 724, -385, 728, -485, 761, -517, 824, -517, 864, -482, 862, -388, 959, -382, 998, -349, 995, -253, 964, -218, 867, -219, 862, -119, 828, -85, 763, -86, 726, -116, 727, -219, 589, -218, 589, 7, 553, 41, 447, 42, 448, 179, 611, 181, 651, 215, 649, 276, 616, 311, 448, 310, 445, 433, 615, 434, 653, 468, 652, 526, 619, 563, 448, 561, 445, 702, 412, 738, 119, 738, 79, 704, 79, 566, -70, 563, -109, 531, -106, 469, -70, 433, 80, 432, 79, 307, -72, 310, -112.247, 274.135, -110.736, 212.167, -73, 182, 82, 179, 79, 43, -660, 43, -661, 181, -693, 217, -819, 216, -855, 185, -851, 40, -959, 38, -996, 7, -995, -581)
+polygon = PackedVector2Array(-1014, -441, -906, -443, -900, -559, -864, -591, -738, -587, -700, -553, -700, -441, -316, -443, -312, -465, -274, -503, 100, -499, 142, -471, 146, -441, 582, -441, 622, -409, 624, -189, 774, -197, 774, -313, 806, -337, 874, -335, 906, -305, 912, -199, 1018, -193, 1050, -165, 1054, -63, 1010, -29, 912, -25, 916, 81, 876, 113, 808, 117, 776, 75, 772, -21, 626, -27, 619, 217, 583, 244, 467, 247, 472, 336, 643, 335, 686, 376, 686, 433, 649, 466, 471, 475, 469, 568, 435, 591, 127, 597, 86, 563, 86, 470, -75, 470, -114, 438, -112, 374, -82, 340, 88, 340, 86, 247, -698, 253, -700, 401, -741, 436, -866, 431, -905, 399, -903, 249, -1014, 251, -1053, 215, -1052, -399)
 
 [node name="InteractableArea" parent="." node_paths=PackedStringArray("_toggle_visibility") instance=ExtResource("3_vhmlw")]
-position = Vector2(-80, -740)
+position = Vector2(-87, -545)
 _toggle_visibility = NodePath("StandardLabel")
 
 [node name="StandardLabel" parent="InteractableArea" instance=ExtResource("4_713yj")]
@@ -32,5 +32,6 @@ offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Enter (E)"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="interacted_with" from="InteractableArea" to="." method="_on_interactable_area_interacted_with"]

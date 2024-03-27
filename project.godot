@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Asteroid Miner"
-run/main_scene="res://levels/space_station/space_station.tscn"
+run/main_scene="res://levels/space/space.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Session="*res://session/session.gd"
 
 [debug]
 
