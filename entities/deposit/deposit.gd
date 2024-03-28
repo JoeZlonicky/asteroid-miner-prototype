@@ -50,5 +50,6 @@ func spawn_pickup(item_data: ItemData) -> void:
 	var current_scene: Node = get_tree().current_scene
 	var pickup: Pickup = PICKUP_SCENE.instantiate()
 	pickup.item_data = item_data
+	await get_tree().process_frame
 	current_scene.add_child(pickup)
 	pickup.global_position = global_position

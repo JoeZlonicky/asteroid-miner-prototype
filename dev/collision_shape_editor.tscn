@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://d2if4ubt3lh8"]
 
-[ext_resource type="Texture2D" uid="uid://y4f5bwabg44m" path="res://data/asteroids/palladium_asteroid/palladium_asteroid.svg" id="1_6v7hv"]
+[ext_resource type="Texture2D" uid="uid://bu0a4m4qia66f" path="res://data/deposits/cobalt_deposit/cobalt_deposit.svg" id="1_1wusx"]
 
 [node name="CollisionShapeEditor" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_6v7hv")
+texture = ExtResource("1_1wusx")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-131, -231, 49, -241, 241, 49, 127, 215, -30, 258, -239, 90, -251, -45)
+polygon = PackedVector2Array(-22, -58, 7, -56, 65, -39, 76, -20, 84, 24, 58, 52, -49, 69, -91, 5, -86, -31, -60, -41)

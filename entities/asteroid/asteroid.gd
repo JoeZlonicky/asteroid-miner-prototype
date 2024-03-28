@@ -18,9 +18,6 @@ func _ready() -> void:
 	collision_polygon.polygon = data.collision
 	
 	for point in data.deposit_spawn_locations:
-		if randf() < 0.5:
-			continue
-		
 		var deposit: Deposit = DEPOSIT_SCENE.instantiate()
 		deposit.data = data.deposit_data
 		deposit.show_behind_parent = true

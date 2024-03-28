@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://clydoun60iql"]
+
+[ext_resource type="Texture2D" uid="uid://cfa0rqe0pepwy" path="res://components/mechanics/turret/turret.svg" id="1_2qkib"]
+[ext_resource type="Script" path="res://components/mechanics/turret/turret.gd" id="1_iwng4"]
+
+[node name="Turret" type="Sprite2D"]
+texture = ExtResource("1_2qkib")
+offset = Vector2(0, -32)
+script = ExtResource("1_iwng4")
+
+[node name="Point" type="Marker2D" parent="."]
+position = Vector2(0, -119)
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
